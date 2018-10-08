@@ -30,7 +30,7 @@ select * from ko_kim_signup
   	<if test="lidesc!=null">signuppersonallity=#{signuppersonallity},</if>
   	<if test="lidesc!=null">signupphone=#{signupphone},</if>
   	<if test="lidesc!=null">signupdate=#{signupdate},</if>
-  	<if test="lidesc!=null">signupconcern=#{signupconcern},</if>
+  	<if test="lidesc!=null">signupconcern=#{signupconcern},</if> 
   </set>
 	where signupnum=#{signupnum}
   </update>
