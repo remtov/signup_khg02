@@ -15,7 +15,7 @@
 			<property name="autoCommit" value="${db.autoCommit}"/>
 			<property name="minimumIdle" value="${db.minimumIdle}"/>
 			<property name="maximumPoolSize" value="${db.maximumPoolSize}"/>
-			
+			 
 		</bean>
 		<bean id="dataSourceProxy" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
 			<constructor-arg ref="hikariDataSource"/>
