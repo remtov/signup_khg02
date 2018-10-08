@@ -1,0 +1,102 @@
+package com.ict.member.vo;
+
+import org.apache.ibatis.type.Alias;
+
+@Alias("su")
+public class SignUp {
+	private Integer signupNum;
+	private String signupName;
+	private String signupId;
+	private String signupPassword;
+	private String signupEmail;
+	private String signupNickName;
+	private Integer signupPersonallity;
+	private Integer signupPhone;
+	private Integer  signupDate;
+	private String signupConcern;
+	@Override
+	public String toString() {
+		return "SignUp [signupNum=" + signupNum + ", signupName=" + signupName + ", signupId=" + signupId
+				+ ", signupPassword=" + signupPassword + ", signupEmail=" + signupEmail + ", signupNickName="
+				+ signupNickName + ", signupPersonallity=" + signupPersonallity + ", signupPhone=" + signupPhone
+				+ ", signupDate=" + signupDate + ", signupConcern=" + signupConcern + "]";
+	}
+	public Integer getSignupNum() {
+		return signupNum;
+	}
+	public void setSignupNum(Integer signupNum) {
+		this.signupNum = signupNum;
+	}
+	public String getSignupName() {
+		return signupName;
+	}
+	public void setSignupName(String signupName) {
+		this.signupName = signupName;
+	}
+	public String getSignupId() {
+		return signupId;
+	}
+	public void setSignupId(String signupId) {
+		this.signupId = signupId;
+	}
+	public String getSignupPassword() {
+		return signupPassword;
+	}
+	public void setSignupPassword(String signupPassword) {
+		this.signupPassword = signupPassword;
+	}
+	public String getSignupEmail() {
+		return signupEmail;
+	}
+	public void setSignupEmail(String signupEmail) {
+		this.signupEmail = signupEmail;
+	}
+	public String getSignupNickName() {
+		return signupNickName;
+	}
+	public void setSignupNickName(String signupNickName) {
+		this.signupNickName = signupNickName;
+	}
+	public Integer getSignupPersonallity() {
+		return signupPersonallity;
+	}
+	public void setSignupPersonallity(Integer signupPersonallity) {
+		this.signupPersonallity = signupPersonallity;
+	}
+	public Integer getSignupPhone() {
+		return signupPhone;
+	}
+	public void setSignupPhone(Integer signupPhone) {
+		this.signupPhone = signupPhone;
+	}
+	public Integer getSignupDate() {
+		return signupDate;
+	}
+	public void setSignupDate(Integer signupDate) {
+		this.signupDate = signupDate;
+	}
+	public String getSignupConcern() {
+		return signupConcern;
+	}
+	public void setSignupConcern(String signupConcern) {
+		this.signupConcern = signupConcern;
+	}
+	public SignUp(Integer signupNum, String signupName, String signupId, String signupPassword, String signupEmail,
+			String signupNickName, Integer signupPersonallity, Integer signupPhone, Integer signupDate,
+			String signupConcern) {
+		super();
+		this.signupNum = signupNum;
+		this.signupName = signupName;
+		this.signupId = signupId;
+		this.signupPassword = signupPassword;
+		this.signupEmail = signupEmail;
+		this.signupNickName = signupNickName;
+		this.signupPersonallity = signupPersonallity;
+		this.signupPhone = signupPhone;
+		this.signupDate = signupDate;
+		this.signupConcern = signupConcern;
+	}
+	public SignUp() {
+		
+	}
+}
