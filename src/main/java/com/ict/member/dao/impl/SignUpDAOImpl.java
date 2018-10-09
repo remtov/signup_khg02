@@ -1,4 +1,4 @@
-package com.ict.member.DAO.impl;
+package com.ict.member.dao.impl;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.ict.member.DAO.SignUpDAO;
+import com.ict.member.dao.SignUpDAO;
 import com.ict.member.vo.SignUp;
 @Repository
 public class SignUpDAOImpl implements SignUpDAO {

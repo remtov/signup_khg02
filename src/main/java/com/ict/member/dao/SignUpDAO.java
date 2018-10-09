@@ -1,4 +1,4 @@
-package com.ict.member.DAO;
+package com.ict.member.dao;
 
 import java.util.List;
 

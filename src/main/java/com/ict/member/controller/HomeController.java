@@ -1,4 +1,4 @@
-package com.ict.member;
+package com.ict.member.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
