@@ -149,16 +149,16 @@ SIGNUPCONCERN
 				<tbody>
 					<c:forEach items="${ko_kim_signupList}" var="ko_kim_signup">
 						<tr>
-							<td>${ko_kim_signup.signupnum}</td>
-							<td>${ko_kim_signup.signupname}</td>
-							<td>${ko_kim_signup.signupid}</td>
-							<td>${ko_kim_signup.signuppassword}</td>
-							<td>${ko_kim_signup.signupemail}</td>
-							<td>${ko_kim_signup.signupnickname}</td>
-							<td>${ko_kim_signup.signuppersonallity}</td>
-							<td>${ko_kim_signup.signupphone}</td>
-							<td>${ko_kim_signup.signupdate}</td>
-							<td>${ko_kim_signup.signupconcern}</td>
+							<td>${ko_kim_signup.signupNum}</td>
+							<td>${ko_kim_signup.signupName}</td>
+							<td>${ko_kim_signup.signupId}</td>
+							<td>${ko_kim_signup.signupPassword}</td>
+							<td>${ko_kim_signup.signupEmail}</td>
+							<td>${ko_kim_signup.signupNickName}</td>
+							<td>${ko_kim_signup.signupPersonallity}</td>
+							<td>${ko_kim_signup.signupPhone}</td>
+							<td>${ko_kim_signup.signupDate}</td>
+							<td>${ko_kim_signup.signupConcern}</td>
 						
 							
 						</tr>
