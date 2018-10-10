@@ -109,44 +109,7 @@
 			<h4>400*580contentLeft Class</h4>
 	
 		
-			<table class="dhtmlxGrid" style="width: 800px; height: 275px; background-color: white;" >
-				<thead>
-					<tr>
-
-
-						<th>SIGNUPNUM</th>
-						<th>SIGNUPNAME</th>
-						<th>SIGNUPID</th>
-						<th>SIGNUPPASSWORD</th>
-						<th>SIGNUPEMAIL</th>
-						<th>SIGNUPNICKNAME</th>
-						<th>SIGNUPPERSONALLITY</th>
-						<th>SIGNUPPHONE</th>
-						<th>SIGNUPDATE</th>
-						<th>SIGNUPCONCERN</th>
-
-
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${ko_kim_signupList}" var="ko_kim_signup">
-						<tr>
-							<td>${ko_kim_signup.signupNum}</td>
-							<td>${ko_kim_signup.signupName}</td>
-							<td>${ko_kim_signup.signupId}</td>
-							<td>${ko_kim_signup.signupPassword}</td>
-							<td>${ko_kim_signup.signupEmail}</td>
-							<td>${ko_kim_signup.signupNickName}</td>
-							<td>${ko_kim_signup.signupPersonallity}</td>
-							<td>${ko_kim_signup.signupPhone}</td>
-							<td>${ko_kim_signup.signupDate}</td>
-							<td>${ko_kim_signup.signupConcern}</td>
-
-
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
+			
 		</div>
 
 
