@@ -98,7 +98,10 @@ function saveLevel(){
 				method :'POST',
 				param : params,
 				success:function(res){
-					alert(res);
+					if(res==1){
+						alert('회원가입이 완료 되셨습니다.');
+						location.href="/url/home";
+					};
 				}
 		
 		};
