@@ -17,7 +17,7 @@
 
 
 
-	<div id="container">
+	<div class="container">
 
 		<!-- 두번째 검색창라인 -->
 		<div id="searchLine" style="position: relative;">
@@ -45,7 +45,7 @@
 
 			<!-- 검색창영역 -->
 			<div
-				style="display: inline-block; position: absolute; left: 100px; right: 0;">
+				style="z-index: 1; display: inline-block; position: absolute; left: 100px; right: 0;">
 				<div class="input-group">
 
 					<input type="text" class="form-control" aria-label="..."
@@ -107,22 +107,60 @@
 			<hr>
 		</div>
 
+		
+
 		<div class="contentLeft">
 			<h4>400*580contentLeft Class</h4>
 			<table>
 				<thead>
 					<tr>
-						<th>아이디</th>
-						<th>비밀번호</th>
-						<th>이름</th>
+					
+<!-- 					
+
+SIGNUPNUM, 
+SIGNUPNAME, 
+SIGNUPID, 
+SIGNUPPASSWORD, 
+SIGNUPEMAIL, 
+SIGNUPNICKNAME, 
+SIGNUPPERSONALLITY, 
+SIGNUPPHONE, 
+SIGNUPDATE, 
+SIGNUPCONCERN 
+
+ -->
+ 
+ 
+
+						<th>SIGNUPNUM</th>
+						<th>SIGNUPNAME</th>
+						<th>SIGNUPID</th>
+						<th>SIGNUPPASSWORD</th>
+						<th>SIGNUPEMAIL</th>
+						<th>SIGNUPNICKNAME</th>
+						<th>SIGNUPPERSONALLITY</th>
+						<th>SIGNUPPHONE</th>
+						<th>SIGNUPDATE</th>
+						<th>SIGNUPCONCERN</th>
+					
+						
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${memberList}" var="member">
+					<c:forEach items="${ko_kim_signupList}" var="ko_kim_signup">
 						<tr>
-							<td>${member.id}</td>
-							<td>${member.pw}</td>
-							<td>${member.name}</td>
+							<td>${ko_kim_signup.signupnum}</td>
+							<td>${ko_kim_signup.signupname}</td>
+							<td>${ko_kim_signup.signupid}</td>
+							<td>${ko_kim_signup.signuppassword}</td>
+							<td>${ko_kim_signup.signupemail}</td>
+							<td>${ko_kim_signup.signupnickname}</td>
+							<td>${ko_kim_signup.signuppersonallity}</td>
+							<td>${ko_kim_signup.signupphone}</td>
+							<td>${ko_kim_signup.signupdate}</td>
+							<td>${ko_kim_signup.signupconcern}</td>
+						
+							
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -130,88 +168,12 @@
 		</div>
 
 
-		<div class="contentRight">
-			<h4>400*580contentRight Class</h4>
-		</div>
-
-		<div class="contentLeft">
-			<h4>400*580contentLeft Class</h4>
-			<table>
-				<thead>
-					<tr>
-						<th>아이디</th>
-						<th>비밀번호</th>
-						<th>이름</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${memberList}" var="member">
-						<tr>
-							<td>${member.id}</td>
-							<td>${member.pw}</td>
-							<td>${member.name}</td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
 
 
 		<div class="contentRight">
 			<h4>400*580contentRight Class</h4>
 		</div>
-		<div class="contentLeft">
-			<h4>400*580contentLeft Class</h4>
-			<table>
-				<thead>
-					<tr>
-						<th>아이디</th>
-						<th>비밀번호</th>
-						<th>이름</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${memberList}" var="member">
-						<tr>
-							<td>${member.id}</td>
-							<td>${member.pw}</td>
-							<td>${member.name}</td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
-
-
-		<div class="contentRight">
-			<h4>400*580contentRight Class</h4>
-		</div>
-		<div class="contentLeft">
-			<h4>400*580contentLeft Class</h4>
-			<table>
-				<thead>
-					<tr>
-						<th>아이디</th>
-						<th>비밀번호</th>
-						<th>이름</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${memberList}" var="member">
-						<tr>
-							<td>${member.id}</td>
-							<td>${member.pw}</td>
-							<td>${member.name}</td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
-
-
-		<div class="contentRight">
-			<h4>400*580contentRight Class</h4>
-		</div>
+	
 
 
 

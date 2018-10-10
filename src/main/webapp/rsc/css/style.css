@@ -2,12 +2,13 @@
 
 /* 일반선택자 */
 body {
-	margin: 0px;
+	
 	background-color: #f6f6f6;
 	marginheight: 0px;
 	marginwidth: 0px;
 	overflow-x: hidden;
 	margin: 0px;
+	padding-top:80px
 }
 
 div {
@@ -46,9 +47,9 @@ td {
 	z-index: 2;
 }
 
-
+/* 
 #container {
-	/* background-color: #dfdfdf; */
+	background-color: #dfdfdf;
 	position: relative;
 	cellpadding: 0px;
 	cellspacing: 0px;
@@ -61,11 +62,11 @@ td {
 	cellpadding: 0px;
 	margin: auto;
 }
-
+ */
 
 
 #SearchLine {
-	width: 1200px;
+	width: 1150px;
 	height: 50px;
 
 	/* 	border: 1px solid gray; */
@@ -78,20 +79,20 @@ td {
 }
 
 #content {
-	width: 1200px;
+	width: 1150px;
 	margin-top: 30px;
 	padding: 0px;
 	height: 465px;
 }
 
 #dropDown-menu {
-	width: 1200px;
+	width: 1150px;
 	height: 30px;
 	border: 1px solid gray;
 }
 
 #dropDown-img {
-	width: 1200px;
+	width: 1150px;
 	margin-top: 30px;
 	height: 400px;
 	border: 1px solid gray;
@@ -101,7 +102,7 @@ td {
 .contentLeft {
 	margin-top: 20px;
 	margin-bottom: 30px;
-	width: 580px;
+	width: 560px;
 	height: 400px;
 	padding: 0px;
 	float: left;
@@ -111,7 +112,7 @@ td {
 .contentRight {
 	margin-top: 20px;
 	margin-bottom: 30px;
-	width: 580px;
+	width: 560px;
 	height: 400px;
 	padding: 0px;
 	float: right;
@@ -119,7 +120,7 @@ td {
 }
 
 #contentFinal {
-	width: 1200px;
+	width: 1150px;
 	height: 400px;
 	margin-top: 20px;
 	margin-bottom: 30px;
@@ -147,7 +148,7 @@ td {
 }
 
 #footerInner {
-	width: 1200px;
+	width: 1150px;
 	margin: auto;
 	height: 400px;
 }
