@@ -7,10 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 
 import com.ict.member.service.SignUpService;
 import com.ict.member.vo.SignUp;
@@ -34,6 +34,13 @@ public class SignUpController {
 	public @ResponseBody SignUp getSignUpOne(@PathVariable Integer SignNum) {
 	
 	return sus.selectOneSignUpList(SignNum);
+	}
+	
+	@RequestMapping(value="/SignUp",method=RequestMethod.POST)
+	@ResponseBody
+	public int getDo(@RequestBody SignUp su) {
+								
+		return sus.insertList(su);
 	}
 	
 }

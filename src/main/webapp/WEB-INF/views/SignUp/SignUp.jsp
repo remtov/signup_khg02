@@ -33,13 +33,13 @@ function agreeCheck(frm)
 
 
 이름: <input type ="text" id="name" data-vali="2"><br>
-아이디: <input type ="text" id="id" data-vali="4"><br>
-비밀번호: <input type ="password" id="password" data-vali="4"><br>
-비밀번호 확인: <input type ="password" id="conpassword" data-vali="4"><br>
-e-mail: <input type ="email" id="email" data-vali="6"><br>
+아이디: <input type ="text" id="id" data-vali="2"><br>
+비밀번호: <input type ="password" id="password" data-vali="2"><br>
+비밀번호 확인: <input type ="password" id="conpassword" data-vali="2"><br>
+e-mail: <input type ="email" id="email" data-vali="2"><br>
 별명: <input type ="text" id="nickname" data-vali="2"><br>
-주민등록번호: <input type ="number" id="front" data-vali="5"> - <input type ="number" id="end" data-vali="7"><br>
-폰번호: <input type ="number" id="phone" data-vali="9"><br>
+주민등록번호: <input type ="number" id="front" data-vali="2"> - <input type ="number" id="end" data-vali="2"><br>
+폰번호: <input type ="number" id="phone" data-vali="2"><br>
 
 
   <div class="checkboxes">
@@ -82,9 +82,10 @@ function saveLevel(){
 	var phone = document.querySelector("#phone").value;
 	
 	var identify =front+end;
-	if(password.trim().value!==conpassword.trim().value){
+	if(password.trim()!==conpassword.trim()){
 		alert("비밀번호가 다릅니다.");
-		password.focus();
+		var passfocus =document.querySelector('#password');
+		passfocus.focus();
 	}else{
 	 
 		  
@@ -103,8 +104,11 @@ function saveLevel(){
 		};
 		var au = new AjaxUtil(conf);
 		au.send();
-	 
+		
+	
+		
 }
+	
 }
 </script>
 </body>
