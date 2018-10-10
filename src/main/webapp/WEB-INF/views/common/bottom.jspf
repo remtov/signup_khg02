@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+
+<body>
+
+	<div class="container">
+
+
+		<div class="titleBox">
+			<h1>파이널컨텐츠</h1>
+			<hr>
+		</div>
+		<div id="contentFinal">
+			<h4>400*1200 content final</h4>
+
+		</div>
+
+
+		<div id="footer">
+			<div id="footerInner">
+				<h1>footer</h1>
+				<p>
+					asdfkl wfeflekwfew fwef wefwef wef wefw ef we f we fwe fwef we fe
+					wf we fwe fwe fwef wef w fwe fwe fewf<br> asdfkl wfeflekwfew
+					fwef wefwef wef wefw ef we f we fwe fwef we fe wf we fwe fwe fwef
+					wef w fwe fwe fewf<br>234ioewfkwejfwe fwefwefwefwef wefwe f we
+					fwe fwefwefwef weg w
+				</p>
+				<p>
+					asdfkl wfeflekwfew fwef fe wf we fwe fwe fwef wef w fwe fwe fewf<br>
+					asdfkl wfeflekwfew fwef wefwef wef wefw ef we f we fwe fwef we fe
+					wf we fwe fwe fwef wef w fwe fwe fewf<br>
+				</p>
+			</div>
+
+		</div>
+	</div>
+</body>

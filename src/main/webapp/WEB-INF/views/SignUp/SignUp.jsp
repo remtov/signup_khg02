@@ -1,71 +1,111 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/views/SignUp/common.jsp" %>
 <!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="UTF-8" />
 <title>Insert title here</title>
+<script type="text/javascript">
+function agreeCheck(frm)
+{
+   if (frm.checkButton.disabled==true)
+    frm.checkButton.disabled=false
+   else
+    frm.checkButton.disabled=true
+}
+
+</script>
 </head>
 <body>
 
+<form name="form">
 <h1>Sign Up for join</h1>
 <div>
-<textarea rows="10" cols="">사용하고자 하는 아이디와 이를 동의한다면 하단의 동의함을 누르신 후 사용하세요</textarea>
+<textarea  cols="40" rows="5">사용하고자 하는 아이디와 이를 동의한다면 하단의 동의함을 누르신 후 사용하세요</textarea>
 <div >
-<input type="checkbox" id="agree" value="agree" style="vertical-align: right">동의함
+
 </div>
 </div>
+<input type="checkbox" name="agree" onClick="agreeCheck(this.form)">동의함<br>
 
-이름: <input type ="text" id="name"><br>
-아이디: <input type ="text" id="id"><br>
-비밀번호: <input type ="password" id="password"><br>
-비밀번호 확인: <input type ="password" id="conpassword"><br>
-e-mail: <input type ="email" id="email"><br>
-별명: <input type ="text" id="nickname"><br>
-주민등록번호: <input type ="number" id="front"> - <input type ="number" id="end"><br>
-폰번호: <input type ="number" id="phone"><br>
 
-관심사 :<form>
+이름: <input type ="text" id="name" data-vali="2"><br>
+아이디: <input type ="text" id="id" data-vali="4"><br>
+비밀번호: <input type ="password" id="password" data-vali="4"><br>
+비밀번호 확인: <input type ="password" id="conpassword" data-vali="4"><br>
+e-mail: <input type ="email" id="email" data-vali="6"><br>
+별명: <input type ="text" id="nickname" data-vali="2"><br>
+주민등록번호: <input type ="number" id="front" data-vali="5"> - <input type ="number" id="end" data-vali="7"><br>
+폰번호: <input type ="number" id="phone" data-vali="9"><br>
+
+
   <div class="checkboxes">
-    <label for="beauty"><input type="checkbox" id="beauty" /> <span>미용</span></label>
-    <label for="machine"><input type="checkbox" id="machine" /> <span>전자기기</span></label>
-    <label for="life"><input type="checkbox" id="life" /> <span>생활</span></label>
+  관심사 :  <label for="beauty"><input type="checkbox" id="beauty" value="1" /> <span>미용</span></label>
+    <label for="machine"><input type="checkbox" id="machine" value="2"/> <span>전자기기</span></label>
+    <label for="life"><input type="checkbox" id="life" value="3"/> <span>생활</span></label>
   </div>
+        
+  
+<input type="button" name="checkButton" value=" 확 인 " disabled onclick="saveLevel()">
 </form>
 
-<label for="chkPassport">
-    <input type="checkbox" id="chkPassport" />
-    Do you have Passport?
-</label>
-<hr />
-<div id="dvPassport" style="display: none">
-    Passport Number:
-    <input type="text" id="txtPassportNumber" />
-</div>
-<div id="AddPassport">
-    Add New Password
-</div>
 <script>
 
-function checked(){
-	if($('input:checkbox[id="agree"]').is(":checked") == true){
+
+
+function saveLevel(){
+	
+	var valis = document.querySelectorAll('*[data-vali]');
+	
+	valis.forEach((e) => {
+		var length = e.getAttribute('data-vali');
 		
-	}
+		if(e.value.trim().length < length){
+			e.focus();
+			alert(e.id + '는 ' + length + '이상입니다.');
+			return false;
+		}
+	});
+	
+	var name = document.querySelector("#name").value;
+	var id = document.querySelector("#id").value;
+	var password = document.querySelector("#password").value;
+	var conpassword = document.querySelector("#conpassword").value;
+	var email = document.querySelector("#email").value;
+	var nickname = document.querySelector("#nickname").value;
+	var front = document.querySelector("#front").value;
+	var end = document.querySelector("#end").value;
+	var phone = document.querySelector("#phone").value;
+	var phone = document.querySelector("#phone").value;
+	
+	var identify =front+end;
+	if(password.trim().value!==conpassword.trim().value){
+		alert("비밀번호가 다릅니다.");
+		password.focus();
+	}else{
+	 
+		  
+	var params={signupName:name,signupId:id,signupPassword:password,signupEmail:email,signupNickName:nickname,signupPhone:phone,
+				  signupPersonallity:identify};
+	 params = JSON.stringify(params); 
 
+		var conf = {
+				url : '/SignUp',
+				method :'POST',
+				param : params,
+				success:function(res){
+					alert(res);
+				}
+		
+		};
+		var au = new AjaxUtil(conf);
+		au.send();
+	 
 }
-$(function () {
-    $("#chkPassport").click(function () {
-        if ($(this).is(":checked")) {
-            $("#dvPassport").show();
-            $("#AddPassport").hide();
-        } else {
-            $("#dvPassport").hide();
-            $("#AddPassport").show();
-        }
-    });
-});
-
+}
 </script>
 </body>
 </html>

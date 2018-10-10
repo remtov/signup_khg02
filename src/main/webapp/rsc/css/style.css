@@ -37,8 +37,6 @@ td {
 }
 
 /* 샵은아이디선택자 */
-
-
 #navi {
 	width: 100%;
 	height: 50px;
@@ -47,6 +45,7 @@ td {
 	background-color: white;
 	z-index: 2;
 }
+
 
 #container {
 	/* background-color: #dfdfdf; */
@@ -62,6 +61,8 @@ td {
 	cellpadding: 0px;
 	margin: auto;
 }
+
+
 
 #SearchLine {
 	width: 1200px;
