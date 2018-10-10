@@ -41,12 +41,7 @@
 	href="<%=rootPath%>/codebase/dhtmlx.css" />
 <script src="<%=rootPath%>/codebase/dhtmlx.js"></script>
 
-<script>
-	function doOnFormInit() {
-		// will called immediately after form init
-		// myForm is an instance of new dhtmlXForm object in this sample
-	}
-</script>
+
 
 <!-- dhtmlx 영역 -->
 

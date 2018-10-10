@@ -34,6 +34,7 @@
 	<mvc:resources mapping="/js/**" location="/rsc/js/"/>
 	<mvc:resources mapping="/img/**" location="/rsc/img/"/>
 	<mvc:resources mapping="/codebase/**" location="/rsc/codebase/"/>
+	<mvc:resources mapping="/common/**" location="/rsc/common/"/>
 
 	<!-- 리소스생략 로직 -->
 	

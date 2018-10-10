@@ -2,19 +2,16 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<html>
 
+<!DOCTYPE html>
+<!--pro-->
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 </head>
 
+
 <body>
-
-
-
-
-
-
 
 
 	<div class="container">
@@ -107,30 +104,15 @@
 			<hr>
 		</div>
 
-		
-
+	
 		<div class="contentLeft">
 			<h4>400*580contentLeft Class</h4>
-			<table>
+	
+		
+			<table class="dhtmlxGrid" style="width: 800px; height: 275px; background-color: white;" >
 				<thead>
 					<tr>
-					
-<!-- 					
 
-SIGNUPNUM, 
-SIGNUPNAME, 
-SIGNUPID, 
-SIGNUPPASSWORD, 
-SIGNUPEMAIL, 
-SIGNUPNICKNAME, 
-SIGNUPPERSONALLITY, 
-SIGNUPPHONE, 
-SIGNUPDATE, 
-SIGNUPCONCERN 
-
- -->
- 
- 
 
 						<th>SIGNUPNUM</th>
 						<th>SIGNUPNAME</th>
@@ -142,8 +124,8 @@ SIGNUPCONCERN
 						<th>SIGNUPPHONE</th>
 						<th>SIGNUPDATE</th>
 						<th>SIGNUPCONCERN</th>
-					
-						
+
+
 					</tr>
 				</thead>
 				<tbody>
@@ -159,8 +141,8 @@ SIGNUPCONCERN
 							<td>${ko_kim_signup.signupPhone}</td>
 							<td>${ko_kim_signup.signupDate}</td>
 							<td>${ko_kim_signup.signupConcern}</td>
-						
-							
+
+
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -173,7 +155,7 @@ SIGNUPCONCERN
 		<div class="contentRight">
 			<h4>400*580contentRight Class</h4>
 		</div>
-	
+
 
 
 
@@ -185,10 +167,12 @@ SIGNUPCONCERN
 
 
 
-	
+
 
 
 
 
 </body>
 </html>
+
+
