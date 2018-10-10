@@ -8,62 +8,52 @@
 <title>Insert title here</title>
 </head>
 <body>
+<table border="1">
+	<thead>
+		<tr>
 
-<h1>Sign Up for join</h1>
-<div>
-<textarea rows="10" cols="">사용하고자 하는 아이디와 이를 동의한다면 하단의 동의함을 누르신 후 사용하세요</textarea>
-<div >
-<input type="checkbox" id="agree" value="agree" style="vertical-align: right">동의함
-</div>
-</div>
-
-이름: <input type ="text" id="name"><br>
-아이디: <input type ="text" id="id"><br>
-비밀번호: <input type ="password" id="password"><br>
-비밀번호 확인: <input type ="password" id="conpassword"><br>
-e-mail: <input type ="email" id="email"><br>
-별명: <input type ="text" id="nickname"><br>
-주민등록번호: <input type ="number" id="front"> - <input type ="number" id="end"><br>
-폰번호: <input type ="number" id="phone"><br>
-
-관심사 :<form>
-  <div class="checkboxes">
-    <label for="beauty"><input type="checkbox" id="beauty" /> <span>미용</span></label>
-    <label for="machine"><input type="checkbox" id="machine" /> <span>전자기기</span></label>
-    <label for="life"><input type="checkbox" id="life" /> <span>생활</span></label>
-  </div>
-</form>
-
-<label for="chkPassport">
-    <input type="checkbox" id="chkPassport" />
-    Do you have Passport?
-</label>
-<hr />
-<div id="dvPassport" style="display: none">
-    Passport Number:
-    <input type="text" id="txtPassportNumber" />
-</div>
-<div id="AddPassport">
-    Add New Password
-</div>
+			<th>회원 번호</th>
+			<th>회원 이름</th>
+			<th>회원 비밀번호</th>
+			<th>회원 email</th>
+			<th>회원 별명</th>
+			<th>회원가입 일자</th>
+			<th>회원 관심사</th>
+			<th>회원 주민등록번호</th>
+			<th>회원폰번호</th>
+		</tr>
+	</thead>
+	<tbody id="liBody">
+	</tbody>
+</table>
 <script>
+window.addEventListener('load',function(){
+	var conf = {
+	url : '/SignUp',
+	success : function(res){
+		res = JSON.parse(res);
+		var html = '';
 
-function checked(){
-	if($('input:checkbox[id="agree"]').is(":checked") == true){
-		
+		for(var su of res){
+			html += '<tr>';
+			html += '<td>' + su.signupNum + '</td>';
+			html += '<td><input type="text" id="signupName' + su.signupNum +'"value="'+su.signupName+ '"></td>';
+			html += '<td><input type="text" id="signupId' + su.signupNum +'"value="'+su.signupId+ '"></td>';
+			html += '<td><input type="text" id="signupPassword' + su.signupNum +'"value="'+su.signupPassword+ '"></td>';
+			html += '<td><input type="text" id="signupEmail' + su.signupNum +'"value="'+su.signupEmail+ '"></td>';
+			html += '<td><input type="text" id="signupNickName' + su.signupNum +'"value="'+su.signupNickName+ '"></td>';
+			html += '<td><input type="text" id="signupDate' + su.signupNum +'"value="'+su.signupDate+ '"></td>';
+			html += '<td><input type="text" id="signupConcern' + su.signupNum +'"value="'+su.signupConcern+ '"></td>';
+			html += '<td><input type="text" id="signupPersonallity' + su.signupNum +'"value="'+su.signupPersonallity+ '"></td>';
+			html += '<td><input type="text" id="signupPhone' + su.signupNum +'"value="'+su.signupPhone+ '"></td>';
+			html += '<td><button onclick="updateSu('+su.signupNum+')">수정</button><button onclick="deleteSUInfo('+su.signupNum+')">삭제</button></td>';
+			html += '</tr>';
+		} 
+		document.querySelector('#liBody').insertAdjacentHTML('afterbegin',html);
 	}
-
 }
-$(function () {
-    $("#chkPassport").click(function () {
-        if ($(this).is(":checked")) {
-            $("#dvPassport").show();
-            $("#AddPassport").hide();
-        } else {
-            $("#dvPassport").hide();
-            $("#AddPassport").show();
-        }
-    });
+var au = new AjaxUtil(conf);
+au.send();
 });
 
 </script>
