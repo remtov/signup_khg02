@@ -7,12 +7,16 @@
 	<div class="container">
 
 
-		<div class="titleBox">
-			<h1>파이널컨텐츠</h1>
-			<hr>
+
+		<div class="page-header">
+			<h1>
+				근처 인기매물들 <small>가깝고 좋은 매물을 한눈에</small>
+			</h1>
 		</div>
+		
 		<div id="contentFinal">
-		<table class="dhtmlxGrid" style="width: 1150px; height: 400px; background-color: white;" >
+			<table class="table"
+				style="width: 1150px; height: 400px; background-color: white;">
 				<thead>
 					<tr>
 

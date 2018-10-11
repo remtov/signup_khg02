@@ -1,4 +1,4 @@
-package com.ict.member;
+/*package com.ict.member;
 
 import static org.junit.Assert.*;
 
@@ -20,3 +20,4 @@ public class SqlSessionTest {
 	}
 
 }
+*/
