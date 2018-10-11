@@ -21,7 +21,7 @@
   <option value="signupPersonallity">>회원 주민등록번호</option>
   <option value="signupPhone">>회원폰번호</option>
 </select>
-<input type="text" id = "serchEx"><button type="button" onclick="serch()"> 검색 </button>
+<input type="text" id = "serchEx"><button type="button" onclick="search()"> 검색 </button>
 <table border="1">
 	<thead>
 		<tr>
@@ -43,61 +43,18 @@
 </table>
 <script>
 
-var ser =document.querySelector('#serch').value;
-
-if(ser!='선택하세요'){
-function serch(){
-	 var params='';
-	
+	var ser =document.querySelector('#serch').value;	
 	var tex = document.querySelector('#serchEx').value;
-	if(ser=='signupNum'){
-	 params ={signupNum:tex};
-	}else if(ser=='signupName'){
-		 params ={signupName:tex};
-	}else if(ser=='signupId'){
-		 params ={signupId:tex};
-	}else if(ser=='signupPassword'){
-		 params ={signupPassword:tex};
-	}else if(ser=='signupEmail'){
-		 params ={signupEmail:tex};
-	}else if(ser=='signupNickName'){
-		 params ={signupNickName:tex}
-	};
-	
+	var params = '{"'ser":"tex'"}';
 	params = JSON.stringify(params); 
 	
 
+ window.addEventListener('load',function search(){
+
 	var conf = {
-			url : '/SignUp',
-			param : params,
-			success : function(res){
-				res = JSON.parse(res);
-				var html = '';
-				for(var su of res){
-					html += '<tr onclick="location.href=\'/SignUpView/'+ su.signupNum +'\'">';
-					html += '<td>' + su.signupNum + '</td>';
-					html += '<td>' +su.signupName+ '</td>';
-					html += '<td>' +su.signupId+ '</td>';
-					html += '<td>' +su.signupPassword+ '</td>';
-					html += '<td>' +su.signupEmail+ '</td>';
-					html += '<td>' +su.signupNickName+ '</td>';
-					html += '<td>' +su.signupDate+ '</td>';
-					html += '<td>' +su.signupConcern+ '</td>';
-					html += '<td>' +su.signupPersonallity+ '</td>';
-					html += '<td>' +su.signupPhone+ '</td>';
-					html += '</tr>';
-				} 
-				document.querySelector('#liBody').insertAdjacentHTML('afterbegin',html);
-			}
-	
-	};
-	var au = new AjaxUtil(conf);
-	au.send();
-}
-}
-else {window.addEventListener('load',function(){
-	
-	var conf = {
+	if(tex!=''){
+		param:params,
+	}
 	url : '/SignUp',
 	success : function(res){
 		res = JSON.parse(res);
@@ -121,10 +78,12 @@ else {window.addEventListener('load',function(){
 		document.querySelector('#liBody').insertAdjacentHTML('afterbegin',html);
 	}
 }
+		
+	
 var au = new AjaxUtil(conf);
 au.send();
 });
-}
+
 </script>
 </body>
 </html>
