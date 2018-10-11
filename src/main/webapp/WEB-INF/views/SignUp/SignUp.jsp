@@ -125,7 +125,7 @@ function saveLevel(){
 					if(res==1){
 						alert('회원가입이 완료 되셨습니다.');
 						location.href="/url/home";
-					};
+					};  
 				}
 		
 		};
