@@ -31,7 +31,7 @@ public class HomeController {
 	public String home(Locale locale, Model m,@ModelAttribute SignUp su) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
-		
+
 		m.addAttribute("ko_kim_signupList", sus.selectSignUpList(su) );
 		
 		return "home";

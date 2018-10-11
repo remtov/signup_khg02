@@ -12,7 +12,7 @@ public class SignUp {
 	private String signupNickName;
 	private String signupPersonallity;
 	private String signupPhone;
-	private Integer  signupDate;
+	private Integer signupDate;
 	private String signupConcern;
 	
 	@Override

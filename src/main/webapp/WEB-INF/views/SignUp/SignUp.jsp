@@ -1,7 +1,12 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
+<<<<<<< HEAD
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/SignUp/common.jsp"%>
+=======
+    pageEncoding="UTF-8"%>
+
+>>>>>>> branch 'master' of https://github.com/akakanslzk2/Signup.git
 <!DOCTYPE html>
 
 <html>
@@ -11,10 +16,14 @@
 <script type="text/javascript">
 function agreeCheck(frm)
 {
-   if (frm.checkButton.disabled==true)
-    frm.checkButton.disabled=false
-   else
-    frm.checkButton.disabled=true
+   if (frm.checkButton.disabled==true){
+	   frm.checkButton.disabled=false
+   } 
+   else{
+	   frm.checkButton.disabled=true
+	    
+   }
+  
 }
 
 </script>
@@ -23,12 +32,34 @@ function agreeCheck(frm)
 
 
 
+<<<<<<< HEAD
 	<div class="container">
 		<form name="form">
 			<h1>Sign Up for join</h1>
+=======
+이름: <input type ="text" id="signupName" data-vali="2"><br>
+아이디: <input type ="text" id="signupId" data-vali="2"><br>
+비밀번호: <input type ="password" id="signupPassword" data-vali="2"><br>
+비밀번호 확인: <input type ="password" id="conpassword" data-vali="2"><br>
+e-mail: <input type ="email" id="signupEmail" data-vali="2"><br>
+별명: <input type ="text" id="signupNickName" data-vali="2"><br>
+주민등록번호: <input type ="number" id="front" data-vali="2"> - <input type ="number" id="end" data-vali="2"><br>
+폰번호: <input type ="number" id="signupPhone" data-vali="2"><br>
+>>>>>>> branch 'master' of https://github.com/akakanslzk2/Signup.git
 
 
+<<<<<<< HEAD
 			<table class="table">
+=======
+<div id="myform">
+  관심사 :  <input type="checkbox" id="beauty" >미용
+   <input type="checkbox" id="machine" >전자기기
+   <input type="checkbox" id="life" >생활<br>
+
+   <input type="button" name="checkButton" value=" 확 인 " disabled onclick="saveLevel()">
+</div>
+</form>
+>>>>>>> branch 'master' of https://github.com/akakanslzk2/Signup.git
 
 				<tr>
 					<td colspan="2">
@@ -267,8 +298,30 @@ function agreeCheck(frm)
 	<script>
 
 
-
 function saveLevel(){
+
+	var signupName = document.querySelector('#signupName').value;
+	var signupId = document.querySelector('#signupId').value;
+	var signupPassword = document.querySelector('#signupPassword').value;
+	var signupNickName = document.querySelector('#signupNickName').value;
+	var signupEmail = document.querySelector('#signupEmail').value;
+	var signupPhone = document.querySelector('#signupPhone').value;
+    var setChk = "";
+    if(document.querySelector('#beauty').checked) {
+     setChk += "미용,";
+    }
+    if(document.querySelector('#machine').checked) {
+     setChk += "전자기기,";
+    }
+    if(document.querySelector('#life').checked) {
+     setChk += "생활,";
+    }
+    setChk = setChk.substr(0, setChk.length-1);
+  
+	
+	
+	
+	
 	
 	var valis = document.querySelectorAll('*[data-vali]');
 	
@@ -281,30 +334,29 @@ function saveLevel(){
 			return false;
 		}
 	});
+
+
 	
-	var name = document.querySelector("#name").value;
-	var id = document.querySelector("#id").value;
-	var password = document.querySelector("#password").value;
 	var conpassword = document.querySelector("#conpassword").value;
-	var email = document.querySelector("#email").value;
-	var nickname = document.querySelector("#nickname").value;
 	var front = document.querySelector("#front").value;
 	var end = document.querySelector("#end").value;
-	var phone = document.querySelector("#phone").value;
-	var phone = document.querySelector("#phone").value;
+	
+
 	
 	var identify =front+end;
-	if(password.trim()!==conpassword.trim()){
+	if(signupPassword.trim()!==conpassword.trim()){
 		alert("비밀번호가 다릅니다.");
 		var passfocus =document.querySelector('#password');
 		passfocus.focus();
 	}else{
 	 
 		  
-	var params={signupName:name,signupId:id,signupPassword:password,signupEmail:email,signupNickName:nickname,signupPhone:phone,
-				  signupPersonallity:identify};
+		
+		
+	var params={signupName:signupName,signupId:signupId,signupPassword:signupPassword,signupEmail:signupEmail,signupNickName:signupNickName,signupPhone:signupPhone,
+				  signupPersonallity:identify,signupConcern:setChk};
 	 params = JSON.stringify(params); 
-
+	
 		var conf = {
 				url : '/SignUp',
 				method :'POST',

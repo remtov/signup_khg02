@@ -39,9 +39,9 @@ public class SignUpServiceImpl implements SignUpService {
 	}
 
 	@Override
-	public int deleteSignUpList(int SignNum) {
+	public int deleteSignUpList(int signupNum) {
 		// TODO Auto-generated method stub
-		return sdao.deleteSignUpList(SignNum);
+		return sdao.deleteSignUpList(signupNum);
 	}
 
 }

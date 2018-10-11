@@ -39,9 +39,9 @@ public class SignUpDAOImpl implements SignUpDAO {
 	}
 
 	@Override
-	public int deleteSignUpList(int SignNum) {
+	public int deleteSignUpList(int signupNum) {
 		
-		return ss.delete("SQL.SIGNUP.deleteSignUp",SignNum);
+		return ss.delete("SQL.SIGNUP.deleteSignUp",signupNum);
 	}
 
 }
