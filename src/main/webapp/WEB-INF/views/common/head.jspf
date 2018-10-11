@@ -143,5 +143,52 @@
 		</nav>
 
 	</div>
+	
+	<script>
+var AjaxUtil = function(conf){
+	var xhr = new XMLHttpRequest();
+	var url = conf.url;
+	var method = conf.method?conf.method:'GET';
+	var param = conf.param?conf.param:'{}';
+	
+	var success = conf.success?conf.success:function(res){
+		alert(res);
+	}
+	var error = conf.error?conf.error:function(res){
+		alert(res);
+	}
+	
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState==4){
+			if(xhr.status=="200"){
+				success(xhr.responseText);
+			}else{
+				error(xhr.responseText);
+			}
+		}
+	}
+	xhr.open(method,url);
+	if(method!='GET'){
+		xhr.setRequestHeader('Content-type','application/json; charset=UTF-8');
+	
+	}
+	this.send = function(){
+		xhr.send(param);
+	}
+};
 
+
+/*		html += '<td>' + su.signupNum + '</td>';
+			html += '<td><input type="text" id="signupName' + su.signupNum +'"value="'+su.signupName+ '"></td>';
+			html += '<td><input type="text" id="signupId' + su.signupNum +'"value="'+su.signupId+ '"></td>';
+			html += '<td><input type="text" id="signupPassword' + su.signupNum +'"value="'+su.signupPassword+ '"></td>';
+			html += '<td><input type="text" id="signupEmail' + su.signupNum +'"value="'+su.signupEmail+ '"></td>';
+			html += '<td><input type="text" id="signupNickName' + su.signupNum +'"value="'+su.signupNickName+ '"></td>';
+			html += '<td><input type="text" id="signupDate' + su.signupNum +'"value="'+su.signupDate+ '"></td>';
+			html += '<td><input type="text" id="signupConcern' + su.signupNum +'"value="'+su.signupConcern+ '"></td>';
+			html += '<td><input type="text" id="signupPersonallity' + su.signupNum +'"value="'+su.signupPersonallity+ '"></td>';
+			html += '<td><input type="text" id="signupPhone' + su.signupNum +'"value="'+su.signupPhone+ '"></td>';
+			html += '</tr>';  */
+</script>
+</body>
 	<!-- 상단고정바 -->

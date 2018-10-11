@@ -10,6 +10,6 @@ public interface SignUpDAO {
 	public SignUp selectOneSignUpList(Integer SignNum);
 	public int insertList(SignUp su);
 	public int updateList(SignUp su);
-	public int deleteSignUpList(int SignNum);
+	public int deleteSignUpList(int signupNum);
 	
 }

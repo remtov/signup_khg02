@@ -4,13 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 
 import com.ict.member.service.SignUpService;
 import com.ict.member.vo.SignUp;
@@ -29,11 +30,11 @@ public class SignUpController {
 									// @RequestParam Map<String,String> map로 넣어도 됨
 									//,@PathVariable int linum
 		return sus.selectSignUpList(su);
-	}
-	@RequestMapping(value="/SignUp/{linum}",method=RequestMethod.GET)
-	public @ResponseBody SignUp getSignUpOne(@PathVariable Integer SignNum) {
-	
-	return sus.selectOneSignUpList(SignNum);
+	} 
+	@RequestMapping(value="/SignUpView/{SignNum}",method=RequestMethod.GET)
+	public String getSignUpOne(Model m ,@PathVariable Integer SignNum) {
+	m.addAttribute("getOne",sus.selectOneSignUpList(SignNum));
+	return "SignUp/View";
 	}
 	
 	@RequestMapping(value="/SignUp",method=RequestMethod.POST)
@@ -43,6 +44,19 @@ public class SignUpController {
 		return sus.insertList(su);
 	}
 	
+	@RequestMapping(value="/Delete/{signupNum}",method=RequestMethod.DELETE)
+	@ResponseBody
+	public int getDelete(@PathVariable Integer signupNum) {
+	
+		return sus.deleteSignUpList(signupNum);
+	}
+	@RequestMapping(value="/update/{signupNum}",method=RequestMethod.PUT)
+	@ResponseBody
+	public Integer updateLevelInfo(@RequestBody SignUp su,@PathVariable Integer signupNum) {
+		su.setSignupNum(signupNum);
+		return sus.updateList(su);
+		
+	}
 
 	
 }

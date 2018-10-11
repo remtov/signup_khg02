@@ -3,9 +3,20 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="SQL.SIGNUP">
-<select id ="selectSignUp" resultType="su">
+<select id ="selectSignUp" resultType="su" parameterType="su">
 select * from ko_kim_signup 
+<where>
+	<if test="signupName!=null">signupname like '%'||#{signupName}||'%',</if>
+  	<if test="signupId!=null">signupid='%'||#{signupId}||'%',</if>
+  	<if test="signupPassword!=null">signuppassword='%'||#{signupPassword}||'%',</if>
+  	<if test="signupEmail!=null">signupemail='%'||#{signupEmail}||'%',</if>
+  	<if test="signupNickName!=null">signupnickname='%'||#{signupNickName}||'%',</if>
+  	<if test="signupPersonallity!=null">signuppersonallity='%'||#{signupPersonallity}||'%',</if>
+  	<if test="signupPhone!=null">signupphone='%'||#{signupPhone}||'%',</if>
+  	<if test="signupDate!=null">signupdate='%'||#{signupDate}||'%',</if>
+  	<if test="signupConcern!=null">signupconcern='%'||#{signupConcern}||'%',</if> 
 
+</where>
  order by signupNum
 </select>
 <select id="selectone" resultType="su">
@@ -15,26 +26,35 @@ select * from ko_kim_signup
 </where>
 </select>
   <insert id="insertSignUp" parameterType="su">
-    INSERT INTO ko_kim_signup(signupNum,signupname,signupid,signuppassword,signupemail,signupnickname,signuppersonallity,signupphone,signupdate,signupconcern)
-	VALUES(seq_signupNum.nextval,#{signupName},#{signupId},#{signupPassword},#{signupEmail},#{signupNickName},#{signupPersonallity},#{signupPhone},'3213210','signupconcern')
+    INSERT INTO ko_kim_signup(signupNum,signupname,signupid,signuppassword,signupemail,signupnickname,signuppersonallity,signupphone,signupdate,signupConcern)
+	VALUES(seq_signupNum.nextval,#{signupName},#{signupId},#{signupPassword},#{signupEmail},#{signupNickName},#{signupPersonallity},#{signupPhone},'3213210',#{signupConcern})
   </insert>
   <update id="updateSignUp" parameterType="su">
   update ko_kim_signup
   <set>
 
-  	<if test="signupname!=null">signupname=#{signupName},</if>
-  	<if test="signupid!=null">signupid=#{signupId},</if>
-  	<if test="signuppassword!=null">signuppassword=#{signupPassword},</if>
-  	<if test="signupemail!=null">signupemail=#{signupEmail},</if>
-  	<if test="signupnickname!=null">signupnickname=#{signupNickName},</if>
-  	<if test="signuppersonallity!=null">signuppersonallity=#{signupPersonallity},</if>
-  	<if test="signupphone!=null">signupphone=#{signupPhone},</if>
-  	<if test="signupdate!=null">signupdate=#{signupDate},</if>
-  	<if test="signupconcern!=null">signupconcern=#{signupConcern},</if> 
+  	<if test="signupName!=null">signupname=#{signupName},</if>
+  	<if test="signupId!=null">signupid=#{signupId},</if>
+  	<if test="signupPassword!=null">signuppassword=#{signupPassword},</if>
+  	<if test="signupEmail!=null">signupemail=#{signupEmail},</if>
+  	<if test="signupNickName!=null">signupnickname=#{signupNickName},</if>
+  	<if test="signupPersonallity!=null">signuppersonallity=#{signupPersonallity},</if>
+  	<if test="signupPhone!=null">signupphone=#{signupPhone},</if>
+  	<if test="signupDate!=null">signupdate=#{signupDate},</if>
+  	<if test="signupConcern!=null">signupconcern=#{signupConcern},</if> 
   </set>
 	where signupNum=#{signupNum}
   </update>
   <delete id="deleteSignUp" parameterType="su">
-  delete from ko_kim_signup where signupname=#{signupName}
+  delete from ko_kim_signup where signupNum=#{signupNum}
   </delete>
+  <select id="login" resultType="su">
+        select * from ko_kim_signup where signupid = #{signupid} and signuppassword = #{signuppassword}
+   </select>
+ <update id="keepLogin">
+        update ko_kim_signup set sessionKey = #{sessionId}, sessionLimit = #{next} where signupid=#{signupid}
+    </update>
+
+  
+  
 </mapper>
