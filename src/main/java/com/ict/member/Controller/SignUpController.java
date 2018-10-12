@@ -46,7 +46,8 @@ public class SignUpController {
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	@ResponseBody
 	public int getLogin(@RequestBody SignUp su) {
-								
+		System.out.println(su);
+		System.out.println(sus.login(su));
 		return sus.login(su);
 	}
 	

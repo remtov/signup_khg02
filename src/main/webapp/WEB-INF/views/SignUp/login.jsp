@@ -19,15 +19,16 @@
 function loging(){
 	var signupId =document.querySelector('#signupId').value
 	var signupPassword =document.querySelector('#signupPassword').value
-	var params = '';
-	params = 'signupId=' + signupId + '&signupPassword=' + signupPassword;
-	
+	var params ={signupId:signupId,signupPassword:signupPassword} ;
+	 params = JSON.stringify(params); 
+
 	var conf = {
 		url : '/login',
 		method:'post',
 		param:params,
 		success : function(res){
-			if(res==1){
+			alert(res)
+			if(res=='-1'){
 			res = JSON.parse(res);
 			alert(res);	
 			location.href="/url/SignUp:login";
