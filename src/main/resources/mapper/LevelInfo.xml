@@ -6,15 +6,16 @@
 <select id ="selectSignUp" resultType="su" parameterType="su">
 select * from ko_kim_signup 
 <where>
-	<if test="signupName!=null">signupname like '%'||#{signupName}||'%',</if>
-  	<if test="signupId!=null">signupid='%'||#{signupId}||'%',</if>
-  	<if test="signupPassword!=null">signuppassword='%'||#{signupPassword}||'%',</if>
-  	<if test="signupEmail!=null">signupemail='%'||#{signupEmail}||'%',</if>
-  	<if test="signupNickName!=null">signupnickname='%'||#{signupNickName}||'%',</if>
-  	<if test="signupPersonallity!=null">signuppersonallity='%'||#{signupPersonallity}||'%',</if>
-  	<if test="signupPhone!=null">signupphone='%'||#{signupPhone}||'%',</if>
-  	<if test="signupDate!=null">signupdate='%'||#{signupDate}||'%',</if>
-  	<if test="signupConcern!=null">signupconcern='%'||#{signupConcern}||'%',</if> 
+	<if test="signupNum!=null"> and signupNum like '%'||#{signupNum}||'%'</if>
+	<if test="signupName!=null"> and signupname like '%'||#{signupName}||'%'</if>
+  	<if test="signupId!=null"> and signupid like '%'||#{signupId}||'%'</if>
+  	<if test="signupPassword!=null"> and signuppassword like '%'||#{signupPassword}||'%'</if>
+  	<if test="signupEmail!=null"> and signupemail like '%'||#{signupEmail}||'%'</if>
+  	<if test="signupNickName!=null"> and signupnickname like '%'||#{signupNickName}||'%'</if>
+  	<if test="signupPersonallity!=null"> and signuppersonallity like '%'||#{signupPersonallity}||'%'</if>
+  	<if test="signupPhone!=null"> and signupphone like '%'||#{signupPhone}||'%'</if>
+  	<if test="signupDate!=null"> and signupdate like '%'||#{signupDate}||'%'</if>
+  	<if test="signupConcern!=null"> and signupconcern like '%'||#{signupConcern}||'%'</if> 
 </where>
  order by signupNum
 </select>
@@ -52,8 +53,21 @@ select * from ko_kim_signup
    </select>
  <update id="keepLogin">
         update ko_kim_signup set sessionKey = #{sessionId}, sessionLimit = #{next} where signupid=#{signupid}
-    </update>
+</update>
 
-  
-  
+ <select id ="selectSignUp2" resultType="su" parameterType="su">
+   select signupid from ko_kim_signup 
+  <where>
+  signupname = #{signupName} AND signupphone=#{signupPhone}
+  </where>
+ 
+ </select> 
+  <select id ="selectSignUp3" resultType="su" parameterType="su">
+   select signupPassword from ko_kim_signup 
+  <where>
+  signupname = #{signupName} AND signupphone=#{signupPhone} AND signupid=#{signupid}
+  </where>
+ 
+ </select> 
+
 </mapper>

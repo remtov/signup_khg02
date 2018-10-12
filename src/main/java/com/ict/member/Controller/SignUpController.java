@@ -30,7 +30,7 @@ public class SignUpController {
 									// @RequestParam Map<String,String> map로 넣어도 됨
 									//,@PathVariable int linum
 		return sus.selectSignUpList(su);
-	} 
+	}
 	@RequestMapping(value="/SignUpView/{SignNum}",method=RequestMethod.GET)
 	public String getSignUpOne(Model m ,@PathVariable Integer SignNum) {
 	m.addAttribute("getOne",sus.selectOneSignUpList(SignNum));
@@ -56,6 +56,17 @@ public class SignUpController {
 		su.setSignupNum(signupNum);
 		return sus.updateList(su);
 		
+	}
+	
+	@RequestMapping(value="/findId",method=RequestMethod.GET)
+	public @ResponseBody SignUp getSignUpOne2(@ModelAttribute SignUp su) {
+
+	return sus.selectId(su);
+	}
+	@RequestMapping(value="/findpass",method=RequestMethod.GET)
+	public @ResponseBody SignUp getSignUpOne3(@ModelAttribute SignUp su) {
+
+	return sus.selectPassword(su);
 	}
 
 	

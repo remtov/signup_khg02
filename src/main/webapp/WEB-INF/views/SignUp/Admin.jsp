@@ -9,7 +9,7 @@
 </head>
 <body>
 <select id="serch">
-  <option value="select">>선택하세요</option>
+  <option value="signupNum">>선택하세요</option>
   <option value="signupNum">>회원 번호</option>
   <option value="signupName">>회원 이름</option>
   <option value=signupId>>회원id</option>
@@ -43,21 +43,21 @@
 </table>
 <script>
 
-	var ser =document.querySelector('#serch').value;	
-	var tex = document.querySelector('#serchEx').value;
-	var params = '{"'+ser + '":"' + tex+ '"}';
-	params = JSON.stringify(params); 
 
 	function search(){
 
+		var ser =document.querySelector('#serch').value;	
+		var tex = document.querySelector('#serchEx').value;
+		var params = ser + '=' + tex;
+	
 		var conf = {
-		param : ((tex.trim()!= '') ? params : ''), 
+		param : params,
 		url : '/SignUp',
 		success : function(res){
 			res = JSON.parse(res);
+			document.querySelector('#liBody').innerHTML = '';
 			var html = '';
 			for(var su of res){
-			 document.querySelector('#liBody').innerHTML = '';
 				html += '<tr onclick="location.href=\'/SignUpView/'+ su.signupNum +'\'">';
 				html += '<td>' + su.signupNum + '</td>';
 				html += '<td>' +su.signupName+ '</td>';
@@ -84,8 +84,7 @@
 	
 	
 	
- window.addEventListener('load',search
- );
+ window.addEventListener('load',search);
 
 </script>
 </body>

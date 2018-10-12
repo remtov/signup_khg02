@@ -44,4 +44,16 @@ public class SignUpServiceImpl implements SignUpService {
 		return sdao.deleteSignUpList(signupNum);
 	}
 
+	@Override
+	public SignUp selectId(SignUp su) {
+		// TODO Auto-generated method stub
+		return sdao.selectId(su);
+	}
+
+	@Override
+	public SignUp selectPassword(SignUp su) {
+		// TODO Auto-generated method stub
+		return sdao.selectPassword(su);
+	}
+
 }

@@ -11,5 +11,6 @@ public interface SignUpDAO {
 	public int insertList(SignUp su);
 	public int updateList(SignUp su);
 	public int deleteSignUpList(int signupNum);
-	
+	public SignUp selectId(SignUp su);
+	public SignUp selectPassword(SignUp su);
 }

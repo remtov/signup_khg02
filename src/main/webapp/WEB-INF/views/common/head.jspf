@@ -167,11 +167,12 @@ var AjaxUtil = function(conf){
 			}
 		}
 	}
-	xhr.open(method,url);
 	if(method!='GET'){
 		xhr.setRequestHeader('Content-type','application/json; charset=UTF-8');
-	
+	}else{
+		url = url + '?' + param;
 	}
+	xhr.open(method,url);
 	this.send = function(){
 		xhr.send(param);
 	}

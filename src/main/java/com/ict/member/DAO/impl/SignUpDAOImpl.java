@@ -44,4 +44,16 @@ public class SignUpDAOImpl implements SignUpDAO {
 		return ss.delete("SQL.SIGNUP.deleteSignUp",signupNum);
 	}
 
+	@Override
+	public SignUp selectId(SignUp su) {
+		
+		return ss.selectOne("SQL.SIGNUP.selectSignUp2",su);
+	}
+
+	@Override
+	public SignUp selectPassword(SignUp su) {
+		
+		return ss.selectOne("SQL.SIGNUP.selectSignUp3",su);
+	}
+
 }
