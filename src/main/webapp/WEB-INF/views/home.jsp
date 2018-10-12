@@ -8,81 +8,6 @@
 <html>
 <head>
 
-<!-- 롤오버드랍다운 css & script -->
-<style>
-body {
-	margin: 0;
-}
-
-.zeta-menu-bar {
-	background: grey;
-	display: inline-block;
-	width: 100%;
-}
-
-.zeta-menu {
-	margin: 0;
-	padding: 0;
-}
-
-.zeta-menu li {
-	float: left;
-	list-style: none;
-	position: relative;
-}
-
-.zeta-menu li:hover {
-	background: white;
-}
-
-.zeta-menu li:hover>a {
-	color: grey;
-}
-
-.zeta-menu a {
-	color: white;
-	display: block;
-	padding: 10px 20px;
-	text-decoration: none;
-}
-
-.zeta-menu ul {
-	background: #eee;
-	border: 1px solid silver;
-	display: none;
-	padding: 0;
-	position: absolute;
-	left: 0;
-	top: 100%;
-	width: 180px;
-}
-
-.zeta-menu ul li {
-	float: none;
-}
-
-.zeta-menu ul li:hover {
-	background: #ddd;
-}
-
-.zeta-menu ul li:hover a {
-	color: black;
-}
-
-.zeta-menu ul a {
-	color: black;
-}
-
-.zeta-menu ul ul {
-	left: 100%;
-	top: 0;
-}
-
-.zeta-menu ul ul li {
-	float: left;
-	margin-right: 10px;
-}
-</style>
 
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script>
@@ -257,11 +182,10 @@ body {
 							<ul style="z-index: 3;">
 								<li><a href="#">건강 관리</a></li>
 								<li><a href="#">향수</a></li>
-								<li><a href="#">네일 케어 & 페디큐어</a></li>
+								<li><a href="#">네일 케어 &amp; 페디큐어</a></li>
 								<li><a href="#">헤어 케어 및 스타일링</a></li>
-
 								<li><a href="#">피부 관리</a></li>
-								<li><a href="#">비타민 & 보충재</a></li>
+								<li><a href="#">비타민 &amp; 보충재</a></li>
 								<li><a href="#">면도 및 제모</a></li>
 								<li><a href="#">시력 관리</a></li>
 								<li><a href="#">목욕 및 바디</a></li>
@@ -390,7 +314,7 @@ body {
 							<img src="/img/mainSlide01.jpg" alt="first slide">
 							<div class="carousel-caption">
 								<h3>
-									<span class="label label-danger">마감임박상품 | 경매종료까지:2분 
+									<span class="label label-danger">마감임박상품 | 경매종료까지:2분 </span>
 								</h3>
 							</div>
 							<!-- 오른쪽 위 경매하기 창 -->
@@ -542,11 +466,13 @@ body {
 							<!-- 오른쪽 위 경매하기 창 -->
 						</div>
 
-						<div class="item" style="position: relative;">
-							<img src="/img/mainSlide08.jpg" alt="eighted slide">
+
+
+						<div class="item">
+							<img src="/img/mainSlide08.jpg" alt="sevened slide">
 							<div class="carousel-caption">
 								<h3>
-									<span class="label label-danger">마감임박상품 | 경매종료까지:65분</span>
+									<span class="label label-danger">마감임박상품 | 경매종료까지:78분</span>
 								</h3>
 							</div>
 							<!-- 오른쪽 위 경매하기 창 -->
@@ -556,16 +482,17 @@ body {
 								<p>fdsfse fesd fsdf sdf ef sefsfsedfsdfs fefsfesfsd fds fsdf
 									sd fsdfefsfd fsd fsd</p>
 								<p>입찰자수:46456</p>
-								<p>현재가격: 3495000원</p>
+								<p>현재가격: 124500원</p>
 								<br>
-
 								<button type="button" class="btn btn-default">바로경매하기</button>
 
 							</div>
 							<!-- 오른쪽 위 경매하기 창 -->
-
-
 						</div>
+
+
+
+
 
 
 
@@ -575,15 +502,14 @@ body {
 					<!-- Controls -->
 					<a class="left carousel-control" href="#carousel-example-generic"
 						role="button" data-slide="prev"> <!-- 왼쪽 화살표로직 --> <span
-						aria-hidden="true" style="font-size: 3em;"><p
-								style="padding-top: 250px;">&lt;</p></span> <!-- 왼쪽 화살표로직 --> <span
-						class="sr-only">이전</span>
-					</a> <a class="right carousel-control" href="#carousel-example-generic"
+						aria-hidden="true" style="font-size: 3em;">
+							<p style="margin-top: 250px;">&lt;</p>
+					</span> <!-- 왼쪽 화살표로직 --> <span class="sr-only">이전</span></a> <a
+						class="right carousel-control" href="#carousel-example-generic"
 						role="button" data-slide="next"> <!-- 오른쪽 화살표로직 --> <span
-						aria-hidden="true" style="font-size: 3em;"><p
-								style="padding-top: 250px;">&gt;</p></span> <!-- 오른쪽 화살표로직 --> <span
-						class="sr-only">다음</span>
-					</a>
+						aria-hidden="true" style="font-size: 3em;">
+							<p style="margin-top: 250px;">&gt;</p>
+					</span> <!-- 오른쪽 화살표로직 --> <span class="sr-only">다음</span></a>
 
 				</div>
 
@@ -601,64 +527,347 @@ body {
 		</div>
 
 
-
+		<!-- 왼쪽컨텐츠 1열 -->
 		<div class="contentLeft" style="position: relative;">
-			<table class="table table-bordered">
-				<tbody>
 
-					<tr>
-						<td colspan="2">카테고리</td>
+			<table class="contentRigntLeftBoxTable">
 
-					</tr>
-
-					<tr style="height: 100px;">
-						<td rowspan="3" class="td7"><img src="">사진</td>
-						<td><img src="" class="td3">사진2</td>
-
-					</tr>
-					<tr style="height: 100px;">
-						<td><img src="">사진3</td>
-					</tr>
-					<tr style="height: 100px;">
-						<td><img src="">사진4</td>
-					</tr>
+				<tr>
+					<!-- 카테고리로직 영역 -->
+					<td colspan="2">
+						<ol class="breadcrumb2">
+							<li><a href="#">홈</a></li>
+							<li><a href="#">전자</a></li>
+							<li class="active">카메라</li>
+						</ol>
+					</td>
+					<!-- 카테고리로직 영역 -->
+				</tr>
 
 
-				</tbody>
+				<tr style="height: 100px;">
+					<!-- 첫번째사진영역 -->
+					<td rowspan="3" style="width: 400px;"><div
+							style="overflow: hidden; height: 300px; width: 400px;">
+							<img style="width: auto; height: 300px;"
+								src="/img/railCamera01.jpg">
+						</div></td>
+					<!-- 첫번째사진영역 -->
+
+					<!-- 두번째사진영역 -->
+					<td style="width: 160px;"><div
+							style="width: 160px; height: 100px; overflow: hidden;">
+							<img style="width: 160px; height: auto;"
+								src="/img/railCamera02.jpg">
+						</div></td>
+					<!-- 두번째사진영역 -->
+				</tr>
+				<!-- 세번째사진영역 -->
+				<tr style="height: 100px;">
+					<td><div
+							style="width: 160px; height: 100px; overflow: hidden;">
+							<img style="width: 160px; height: auto;"
+								src="/img/railCamera03.jpg">
+						</div></td>
+				</tr>
+				<!-- 세번째사진영역 -->
+				<!-- 네번째사진영역 -->
+				<tr style="height: 100px;">
+					<td><div
+							style="width: 160px; height: 100px; overflow: hidden;">
+							<img style="width: 160px; height: auto; margin-top: -50px"
+								src="/img/railCamera04.jpg">
+						</div></td>
+				</tr>
+				<!-- 네번째사진영역 -->
+
 			</table>
 
+
+
 			<h3>Product Title</h3>
-			<h5>입찰자수:345343534</h5>
+			<h5>입찰자수:345343534 | 현재가격:8152000원</h5>
 			<p>글wefwefdsf wfwdfw fdwf wdfwfwdfwdf wdfwdfwd fwdfwfdw jsdhfjkds
 				fsdjf sjdf hsdjfh skdjfhsjdfhskdj sadf sadf asdfhsdjfhsf sdf sda
 				faskjdfhksjdhfjsdf sdf sdf dsf af sadf sdaf
 				sdksasdfasdfkjhsadkjfhasdkjfhaskdja sdf sdaf asdf sad
-				fdhfjksdhfskdjfhsd f</p>
+				fdhfjksdhfskdjfhsd gwergwer gwergwer ger gwer g ergwer g wergwer g
+				wergwegwergwergwer g werg wer htr he th eth et hertertr th f</p>
+			<p>글wefwefddfwd fwdfwfdw jsdhfjkds fsdjf sjdf hsdjfh
+				skdjfhsjdfhskdj sadf sadf asdfhsdjfhsf sdf sda faskjdfhksjdhfjsdf
+				sdf sdf dsf af sadf sdaf sdksasdfasdfkjhsadkjfhasdkjfhaskdja sdf
+				sdaf asdf sad fdhfjksdhfskdjfhsd gwergwer gwergwer ger gw g
+				wergwegwergwergwer g werg wer htr he th eth et hertertr th f</p>
 
-			<div style="position: absolute; bottom: 0px; right: 0px">
-				<h4>
-					<span class="label label-default">더보기</span>
-				</h4>
-			</div>
+			<!-- 더보기 스판버튼-->
+			<h4>
+				<a href="#" style="boreder: 0px;"><span
+					class="label label-default"
+					style="position: absolute; bottom: 0px; right: 0px; border: 3px solid #f6f6f6;">더보기</span>
+				</a>
+			</h4>
+			<!-- 더보기 스판버튼-->
 
 
 		</div>
+		<!-- 왼쪽컨텐츠 1열 -->
 
 
 
+		<!-- 오른쪽컨텐츠 1열 -->
+		<div class="contentRight" style="position: relative;">
+			<table class="contentRigntLeftBoxTable">
+				<tbody>
 
-		<div class="contentRight">
-			<h4>400*580contentRight Class</h4>
+					<tr>
+						<!-- 카테고리로직 영역 -->
+						<td colspan="2">
+							<ol class="breadcrumb2">
+								<li><a href="#">홈</a></li>
+								<li><a href="#">모터</a></li>
+								<li class="active">모터바이크</li>
+							</ol>
+						</td>
+						<!-- 카테고리로직 영역 -->
+					</tr>
+
+					<tr style="height: 100px;">
+						<!-- 첫번째사진영역 -->
+						<td rowspan="3" style="width: 400px;"><div
+								style="overflow: hidden; height: 300px; width: 400px;">
+								<img style="width: auto; height: 300px;"
+									src="/img/motorBike01.jpg">
+							</div></td>
+						<!-- 첫번째사진영역 -->
+
+						<!-- 두번째사진영역 -->
+						<td style="width: 160px;"><div
+								style="width: 160px; height: 100px; overflow: hidden;">
+								<img style="width: 160px; height: auto;"
+									src="/img/motorBike02.jpg">
+							</div></td>
+						<!-- 두번째사진영역 -->
+					</tr>
+					<!-- 세번째사진영역 -->
+					<tr style="height: 100px;">
+						<td><div
+								style="width: 160px; height: 100px; overflow: hidden;">
+								<img style="width: 160px; height: auto;"
+									src="/img/motorBike03.jpg">
+							</div></td>
+					</tr>
+					<!-- 세번째사진영역 -->
+					<!-- 네번째사진영역 -->
+					<tr style="height: 100px;">
+						<td><div
+								style="width: 160px; height: 100px; overflow: hidden;">
+								<img style="width: 160px; height: auto;"
+									src="/img/motorBike04.jpg">
+							</div></td>
+					</tr>
+					<!-- 네번째사진영역 -->
+			</table>
+
+			<h3>Product Title2</h3>
+			<h5>입찰자수:787844 | 현재가격:985000원</h5>
+			<p>글wefwefdsf wfwdfw fdwf wdfwfwdfwdf wdfwdfwd fwdfwfdw jsdhfjkds
+				fsdjf sjdf hsdjfh skdjfhsjdfhskdj sadf sadf asdfhsdjfhsf sdf sda
+				faskjdfhksjdhfjsdf sdf sdf dsf af sadf sdaf
+				sdksasdfasdfkjhsadkjfhasdkjfhaskdja sdf sdaf asdf sad
+				fdhfjksdhfskdjfhsd gwergwer gwergwer ger gwer g ergwer g wergwer g
+				wergwegwergwergwer g werg wer htr he th eth et hertertr th f</p>
+			<p>글wefwefddfwd fwdfwfdw jsdhfjkds fsdjf sjdf hsdjfh
+				skdjfhsjdfhskdj sadf sadf asdfhsdjfhsf sdf sda faskjdfhksjdhfjsdf
+				sdf sdf dsf af sadf sdaf sdksasdfasdfkjhsadkjfhasdkjfhaskdja sdf
+				sdaf asdf sad fdhfjksdhfskdjfhsd gwergwer gwergwer ger gw g
+				wergwegwergwergwer g werg wer htr he th eth et hertertr th f</p>
+
+			<!-- 더보기 스판버튼-->
+			<h4>
+				<a href="#" style="boreder: 0px;"><span
+					class="label label-default"
+					style="position: absolute; bottom: 0px; right: 0px; border: 3px solid #f6f6f6;">더보기</span>
+				</a>
+			</h4>
+			<!-- 더보기 스판버튼-->
+
+
 		</div>
+		<!-- 오른쪽컨텐츠 1열 -->
 
 
 
 
+
+
+
+		<!-- 왼쪽컨텐츠 2열 -->
+		<div class="contentLeft" style="position: relative;">
+
+			<table class="contentRigntLeftBoxTable">
+
+				<tr>
+					<!-- 카테고리로직 영역 -->
+					<td colspan="2">
+						<ol class="breadcrumb2">
+							<li><a href="#">홈</a></li>
+							<li><a href="#">의류</a></li>
+							<li class="active">신발</li>
+						</ol>
+					</td>
+					<!-- 카테고리로직 영역 -->
+				</tr>
+
+
+				<tr style="height: 100px;">
+					<!-- 첫번째사진영역 -->
+					<td rowspan="3" style="width: 400px;"><div
+							style="overflow: hidden; height: 300px; width: 400px;">
+							<img style="width: 400px; height: auto; margin-top: -70px"
+								src="/img/nike01.jpg">
+						</div></td>
+					<!-- 첫번째사진영역 -->
+
+					<!-- 두번째사진영역 -->
+					<td style="width: 160px;"><div
+							style="width: 160px; height: 100px; overflow: hidden;">
+							<img style="width: 160px; height: auto; margin-top: -50px"
+								src="/img/nike02.jpg">
+						</div></td>
+					<!-- 두번째사진영역 -->
+				</tr>
+				<!-- 세번째사진영역 -->
+				<tr style="height: 100px;">
+					<td><div
+							style="width: 160px; height: 100px; overflow: hidden;">
+							<img style="width: 160px; height: auto; margin-top: -10px"
+								src="/img/nike03.jpg">
+						</div></td>
+				</tr>
+				<!-- 세번째사진영역 -->
+				<!-- 네번째사진영역 -->
+				<tr style="height: 100px;">
+					<td><div
+							style="width: 160px; height: 100px; overflow: hidden;">
+							<img style="width: 160px; height: auto;" src="/img/nike04.jpg">
+						</div></td>
+				</tr>
+				<!-- 네번째사진영역 -->
+
+			</table>
+
+
+
+			<h3>Product Title3</h3>
+			<h5>입찰자수:34534534 | 현재가격:81523000원</h5>
+			<p>글wefwefdsf wfwdfw fdwf wdfwfwdfwdf wdfwdfwd fwdfwfdw jsdhfjkds
+				fsdjf sjdf hsdjfh skdjfhsjdfhskdj sadf sadf asdfhsdjfhsf sdf sda
+				faskjdfhksjdhfjsdf sdf sdf dsf af sadf sdaf
+				sdksasdfasdfkjhsadkjfhasdkjfhaskdja sdf sdaf asdf sad
+				fdhfjksdhfskdjfhsd gwergwer gwergwer ger gwer g ergwer g wergwer g
+				wergwegwergwergwer g werg wer htr he th eth et hertertr th f</p>
+			<p>글wefwefddfwd fwdfwfdw jsdhfjkds fsdjf sjdf hsdjfh
+				skdjfhsjdfhskdj sadf sadf asdfhsdjfhsf sdf sda faskjdfhksjdhfjsdf
+				sdf sdf dsf af sadf sdaf sdksasdfasdfkjhsadkjfhasdkjfhaskdja sdf
+				sdaf asdf sad fdhfjksdhfskdjfhsd gwergwer gwergwer ger gw g
+				wergwegwergwergwer g werg wer htr he th eth et hertertr th f</p>
+
+			<!-- 더보기 스판버튼-->
+			<h4>
+				<a href="#" style="boreder: 0px;"><span
+					class="label label-default"
+					style="position: absolute; bottom: 0px; right: 0px; border: 3px solid #f6f6f6;">더보기</span>
+				</a>
+			</h4>
+			<!-- 더보기 스판버튼-->
+
+
+		</div>
+		<!-- 왼쪽컨텐츠 2열 -->
+
+
+
+		<!-- 오른쪽컨텐츠 2열 -->
+		<div class="contentRight" style="position: relative;">
+			<table class="contentRigntLeftBoxTable">
+				<tbody>
+
+					<tr>
+						<!-- 카테고리로직 영역 -->
+						<td colspan="2">
+							<ol class="breadcrumb2">
+								<li><a href="#">홈</a></li>
+								<li><a href="#">모터</a></li>
+								<li class="active">자동차</li>
+							</ol>
+						</td>
+						<!-- 카테고리로직 영역 -->
+					</tr>
+
+					<tr style="height: 100px;">
+						<!-- 첫번째사진영역 -->
+						<td rowspan="3" style="width: 400px;"><div
+								style="overflow: hidden; height: 300px; width: 400px;">
+								<img style="width: auto; height: 300px;" src="/img/car01.jpg">
+							</div></td>
+						<!-- 첫번째사진영역 -->
+
+						<!-- 두번째사진영역 -->
+						<td style="width: 160px;"><div
+								style="width: 160px; height: 100px; overflow: hidden;">
+								<img style="width: 160px; height: auto;" src="/img/car02.jpg">
+							</div></td>
+						<!-- 두번째사진영역 -->
+					</tr>
+					<!-- 세번째사진영역 -->
+					<tr style="height: 100px;">
+						<td><div
+								style="width: 160px; height: 100px; overflow: hidden;">
+								<img style="width: 160px; height: auto;" src="/img/car03.jpg">
+							</div></td>
+					</tr>
+					<!-- 세번째사진영역 -->
+					<!-- 네번째사진영역 -->
+					<tr style="height: 100px;">
+						<td><div
+								style="width: 160px; height: 100px; overflow: hidden;">
+								<img style="width: 160px; height: auto;" src="/img/car04.jpg">
+							</div></td>
+					</tr>
+					<!-- 네번째사진영역 -->
+			</table>
+
+			<h3>Product Title2</h3>
+			<h5>입찰자수:787844 | 현재가격:985000원</h5>
+			<p>글wefwefdsf wfwdfw fdwf wdfwfwdfwdf wdfwdfwd fwdfwfdw jsdhfjkds
+				fsdjf sjdf hsdjfh skdjfhsjdfhskdj sadf sadf asdfhsdjfhsf sdf sda
+				faskjdfhksjdhfjsdf sdf sdf dsf af sadf sdaf
+				sdksasdfasdfkjhsadkjfhasdkjfhaskdja sdf sdaf asdf sad
+				fdhfjksdhfskdjfhsd gwergwer gwergwer ger gwer g ergwer g wergwer g
+				wergwegwergwergwer g werg wer htr he th eth et hertertr th f</p>
+			<p>글wefwefddfwd fwdfwfdw jsdhfjkds fsdjf sjdf hsdjfh
+				skdjfhsjdfhskdj sadf sadf asdfhsdjfhsf sdf sda faskjdfhksjdhfjsdf
+				sdf sdf dsf af sadf sdaf sdksasdfasdfkjhsadkjfhasdkjfhaskdja sdf
+				sdaf asdf sad fdhfjksdhfskdjfhsd gwergwer gwergwer ger gw g
+				wergwegwergwergwer g werg wer htr he th eth et hertertr th f</p>
+
+			<!-- 더보기 스판버튼-->
+			<h4>
+				<a href="#" style="boreder: 0px;"><span
+					class="label label-default"
+					style="position: absolute; bottom: 0px; right: 0px; border: 3px solid #f6f6f6;">더보기</span>
+				</a>
+			</h4>
+			<!-- 더보기 스판버튼-->
+
+
+		</div>
+		<!-- 오른쪽컨텐츠 2열 -->
 
 
 
 	</div>
-
+	<!-- 전체컨테이너 -->
 
 
 
