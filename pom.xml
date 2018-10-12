@@ -6,9 +6,9 @@
 	<groupId>com.ict.member</groupId>
 	<artifactId>Signup</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging> 
+	<packaging>war</packaging>
 
- 
+
 	<properties>
 		<!-- Generic properties -->
 		<m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
@@ -55,7 +55,17 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
+
+			<!-- jstl오류나서 추가 -->
+			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- jstl오류나서 추가 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
@@ -230,7 +240,7 @@
 			<artifactId>aspectjtools</artifactId>
 			<version>1.8.9</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
