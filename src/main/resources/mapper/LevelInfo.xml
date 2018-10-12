@@ -15,7 +15,6 @@ select * from ko_kim_signup
   	<if test="signupPhone!=null">signupphone='%'||#{signupPhone}||'%',</if>
   	<if test="signupDate!=null">signupdate='%'||#{signupDate}||'%',</if>
   	<if test="signupConcern!=null">signupconcern='%'||#{signupConcern}||'%',</if> 
-
 </where>
  order by signupNum
 </select>

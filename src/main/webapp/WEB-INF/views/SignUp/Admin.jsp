@@ -9,7 +9,7 @@
 </head>
 <body>
 <select id="serch">
-  <option value="선택">>선택하세요</option>
+  <option value="select">>선택하세요</option>
   <option value="signupNum">>회원 번호</option>
   <option value="signupName">>회원 이름</option>
   <option value=signupId>>회원id</option>
@@ -45,44 +45,47 @@
 
 	var ser =document.querySelector('#serch').value;	
 	var tex = document.querySelector('#serchEx').value;
-	var params = '{"'ser":"tex'"}';
+	var params = '{"'+ser + '":"' + tex+ '"}';
 	params = JSON.stringify(params); 
-	
 
- window.addEventListener('load',function search(){
+	function search(){
 
-	var conf = {
-	if(tex!=''){
-		param:params,
+		var conf = {
+		param : ((tex.trim()!= '') ? params : ''), 
+		url : '/SignUp',
+		success : function(res){
+			res = JSON.parse(res);
+			var html = '';
+			for(var su of res){
+			 document.querySelector('#liBody').innerHTML = '';
+				html += '<tr onclick="location.href=\'/SignUpView/'+ su.signupNum +'\'">';
+				html += '<td>' + su.signupNum + '</td>';
+				html += '<td>' +su.signupName+ '</td>';
+				html += '<td>' +su.signupId+ '</td>';
+				html += '<td>' +su.signupPassword+ '</td>';
+				html += '<td>' +su.signupEmail+ '</td>';
+				html += '<td>' +su.signupNickName+ '</td>';
+				html += '<td>' +su.signupDate+ '</td>';
+				html += '<td>' +su.signupConcern+ '</td>';
+				html += '<td>' +su.signupPersonallity+ '</td>';
+				html += '<td>' +su.signupPhone+ '</td>';
+				html += '</tr>';
+
+			
+			} 
+			document.querySelector('#liBody').insertAdjacentHTML('afterbegin',html);
+		}
 	}
-	url : '/SignUp',
-	success : function(res){
-		res = JSON.parse(res);
-		var html = '';
-		for(var su of res){
-			html += '<tr onclick="location.href=\'/SignUpView/'+ su.signupNum +'\'">';
-			html += '<td>' + su.signupNum + '</td>';
-			html += '<td>' +su.signupName+ '</td>';
-			html += '<td>' +su.signupId+ '</td>';
-			html += '<td>' +su.signupPassword+ '</td>';
-			html += '<td>' +su.signupEmail+ '</td>';
-			html += '<td>' +su.signupNickName+ '</td>';
-			html += '<td>' +su.signupDate+ '</td>';
-			html += '<td>' +su.signupConcern+ '</td>';
-			html += '<td>' +su.signupPersonallity+ '</td>';
-			html += '<td>' +su.signupPhone+ '</td>';
-			html += '</tr>';
-
+			
 		
-		} 
-		document.querySelector('#liBody').insertAdjacentHTML('afterbegin',html);
+	var au = new AjaxUtil(conf);
+	au.send();
 	}
-}
-		
 	
-var au = new AjaxUtil(conf);
-au.send();
-});
+	
+	
+ window.addEventListener('load',search
+ );
 
 </script>
 </body>
