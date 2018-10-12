@@ -10,10 +10,13 @@
 <body>
 이름 <input type="text" id= "signupName"><br>
 폰번호<input type="text" id= "signupPhone"><br>
-<button type="button" onclick="findid()">아이디 찾기</button>
+<button type="button" onclick="findid()">아이디 찾기</button><button type="button" onclick="back()">로그인/뒤로가기</button>
 
 
 <script>
+function back(){
+	location.href="/url/SignUp:login";
+}
 
 function findid(){
 	var signupName= document.querySelector('#signupName').value

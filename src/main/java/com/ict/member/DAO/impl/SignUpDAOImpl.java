@@ -57,4 +57,10 @@ public class SignUpDAOImpl implements SignUpDAO {
 		return ss.selectOne("SQL.SIGNUP.selectSignUp3",su);
 	}
 
+	@Override
+	public int login(SignUp su) {
+		
+		return ss.selectOne("SQL.SIGNUP.selectSignUp4",su);
+	}
+
 }

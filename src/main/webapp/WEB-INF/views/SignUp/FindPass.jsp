@@ -14,26 +14,27 @@
 아이디<input type="text" id= "signupId"><br>
 이름 <input type="text" id= "signupName"><br>
 폰번호<input type="text" id= "signupPhone"><br>
-<button type="button" onclick="findpass()">아이디 찾기</button>
+<button type="button" onclick="findpass()">아이디 찾기</button><button type="button" onclick="back()">로그인/뒤로가기</button>
 
 
 <script>
-
+function back(){
+	location.href="/url/SignUp:login";
+}
 function findpass(){
 	var signupId= document.querySelector('#signupId').value
 	var signupName= document.querySelector('#signupName').value
 	var signupPhone= document.querySelector('#signupPhone').value
 	var params = '';
 	params = 'signupName=' + signupName + '&signupPhone=' + signupPhone + '&signupId=' + signupId  ;
-alert(params);
-	
+
 		var conf = {
 				url : '/findpass',
 				param:params,
 				success : function(res){
 					if(res!=''){
 					res = JSON.parse(res);
-					alert('회원님의 아이디는'+res.signupPassword+' 입니다.');	
+					alert('회원님의 비밀번호는'+res.signupPassword+' 입니다.');	
 					location.href="/url/SignUp:login";
 				}else{
 					alert('아이디 또는 폰 번호 또는 회원 이름가 일치하지 않습니다.');

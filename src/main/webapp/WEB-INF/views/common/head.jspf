@@ -167,12 +167,15 @@ var AjaxUtil = function(conf){
 			}
 		}
 	}
+	
 	if(method!='GET'){
-		xhr.setRequestHeader('Content-type','application/json; charset=UTF-8');
+		xhr.open(method,url);
+		xhr.setRequestHeader('content-Type','application/json; charset=UTF-8');
 	}else{
 		url = url + '?' + param;
+		xhr.open(method,url);
 	}
-	xhr.open(method,url);
+	
 	this.send = function(){
 		xhr.send(param);
 	}
