@@ -8,66 +8,7 @@
 	<div class="container">
 
 
-		<!-- 제목에쁘게 부트스트랩적용부분 -->
-		<div class="page-header">
-			<h1>
-				근처 인기매물들 <small>가깝고 좋은 매물을 한눈에</small>
-			</h1>
-		</div>
-		<!-- 제목에쁘게 부트스트랩적용부분 -->
-
-		<div class="container"></div>
-
-
-
-
-		<!-- 데이터베이스 셀렉트 테스트 -->
-
-		<h1>Database SelectList Test</h1>
-		<hr>
-
-
-		<div class="container" style="overflow: auto;">
-			<table class="table table-hover" style="background-color: white;">
-				<thead>
-					<tr>
-
-						<th>SIGNUPNUM</th>
-						<th>SIGNUPNAME</th>
-						<th>SIGNUPID</th>
-						<th>SIGNUPPASSWORD</th>
-						<th>SIGNUPEMAIL</th>
-						<th>SIGNUPNICKNAME</th>
-						<th>SIGNUPPERSONALLITY</th>
-						<th>SIGNUPPHONE</th>
-						<th>SIGNUPDATE</th>
-						<th>SIGNUPCONCERN</th>
-
-
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${ko_kim_signupList}" var="ko_kim_signup">
-						<tr>
-							<td>${ko_kim_signup.signupNum}</td>
-							<td>${ko_kim_signup.signupName}</td>
-							<td>${ko_kim_signup.signupId}</td>
-							<td>${ko_kim_signup.signupPassword}</td>
-							<td>${ko_kim_signup.signupEmail}</td>
-							<td>${ko_kim_signup.signupNickName}</td>
-							<td>${ko_kim_signup.signupPersonallity}</td>
-							<td>${ko_kim_signup.signupPhone}</td>
-							<td>${ko_kim_signup.signupDate}</td>
-							<td>${ko_kim_signup.signupConcern}</td>
-
-
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- 데이터베이스 셀렉트 테스트 -->
+		
 
 
 
@@ -75,7 +16,7 @@
 		<div class="container"
 			style="margin-top: 100px; height: 400px; padding: 0px; clear: both; width: 100%;">
 			<div class="container" style="margin: auto; height: 400px; background-color: white;">
-				<h1>footer</h1>
+				<h1>Bottom</h1>
 				<p>
 					asdfkl wfeflekwfew fwef wefwef wef wefw ef we f we fwe fwef we fe
 					wf we fwe fwe fwef wef w fwe fwe fewf<br> asdfkl wfeflekwfew

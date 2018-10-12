@@ -1,6 +1,6 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,40 +8,70 @@
 <title>Insert title here</title>
 </head>
 <body>
-<select id="serch">
-  <option value="signupNum">>선택하세요</option>
-  <option value="signupNum">>회원 번호</option>
-  <option value="signupName">>회원 이름</option>
-  <option value=signupId>>회원id</option>
-  <option value="signupPassword">>회원 비밀번호</option>
-  <option value="signupEmail">>회원 email</option>
-  <option value="signupNickName">>회원 별명</option>
-  <option value="signupDate">>회원가입 일자</option>
-  <option value="signupConcern">>회원 관심사</option>
-  <option value="signupPersonallity">>회원 주민등록번호</option>
-  <option value="signupPhone">>회원폰번호</option>
-</select>
-<input type="text" id = "serchEx"><button type="button" onclick="search()"> 검색 </button>
-<table border="1">
-	<thead>
-		<tr>
+	<!-- 컨테이너 -->
+	<div class="container">
 
-			<th>회원 번호</th>
-			<th>회원 이름</th>
-			<th>회원id</th>
-			<th>회원 비밀번호</th>
-			<th>회원 email</th>
-			<th>회원 별명</th>
-			<th>회원가입 일자</th>
-			<th>회원 관심사</th>
-			<th>회원 주민등록번호</th>
-			<th>회원폰번호</th>
-		</tr>
-	</thead>
-	<tbody id="liBody">
-	</tbody>
-</table>
-<script>
+		<!-- 검색창영역 -->
+		<div class="row" style="margin-bottom: 30px">
+			<div class="col-md-4">
+				<select class="form-control input-lg" id="serch">
+					<option value="signupNum">>선택하세요</option>
+					<option value="signupNum">>회원 번호</option>
+					<option value="signupName">>회원 이름</option>
+					<option value=signupId>>회원id</option>
+					<option value="signupPassword">>회원 비밀번호</option>
+					<option value="signupEmail">>회원 email</option>
+					<option value="signupNickName">>회원 별명</option>
+					<option value="signupDate">>회원가입 일자</option>
+					<option value="signupConcern">>회원 관심사</option>
+					<option value="signupPersonallity">>회원 주민등록번호</option>
+					<option value="signupPhone">>회원폰번호</option>
+				</select>
+			</div>
+
+			<div class="col-md-6">
+				<input class="form-control input-lg" type="text" id="serchEx">
+			</div>
+
+
+			<div class="col-md-2">
+				<button class="btn btn-default btn-lg btn-block" type="button"
+					onclick="search()">검색</button>
+			</div>
+		</div>
+
+
+		<!-- 검색창영역 -->
+		
+		
+
+
+		<table class="table table-hover" border="1">
+			<thead>
+				<tr>
+
+					<th>회원 번호</th>
+					<th>회원 이름</th>
+					<th>회원id</th>
+					<th>회원 비밀번호</th>
+					<th>회원 email</th>
+					<th>회원 별명</th>
+					<th>회원가입 일자</th>
+					<th>회원 관심사</th>
+					<th>회원 주민등록번호</th>
+					<th>회원폰번호</th>
+				</tr>
+			</thead>
+			<tbody id="liBody">
+			</tbody>
+		</table>
+
+
+
+	</div>
+	<!-- 컨테이너 -->
+
+	<script>
 
 
 	function search(){

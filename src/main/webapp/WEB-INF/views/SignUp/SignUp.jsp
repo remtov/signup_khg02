@@ -28,7 +28,8 @@ function agreeCheck(frm)
 			<h1>Sign Up for join</h1>
 			<hr>
 			<div>
-				<textarea cols="40" rows="5" style="width: 100%; height: 300px;">제 1 장 : 총칙 
+				<textarea class="form-control" cols="40" rows="5"
+					style="width: 100%; height: 300px;">제 1 장 : 총칙 
 제 2 장 : 서비스 이용계약 
 제 3 장 : 계약당사자의 의무 
 제 4 장 : 서비스 이용 
@@ -176,62 +177,65 @@ function agreeCheck(frm)
 
 
 
-			<input type="checkbox" name="agree" onClick="agreeCheck(this.form)">동의함<br>
+			<input style="margin-top: 30px" type="checkbox" name="agree"
+				onClick="agreeCheck(this.form)">동의함<br>
 
 			<table class="table">
 
 				<tr>
 					<td>이름:</td>
-					<td><input type="text" id="signupName" data-vali="2">
-					</td>
+					<td><input class="form-control" type="text" id="signupName"
+						data-vali="2"></td>
 				</tr>
 
 				<tr>
 					<td>비밀번호:</td>
-					<td><input type="password" id="signupPassword" data-vali="2">
-					</td>
+					<td><input class="form-control" type="password"
+						id="signupPassword" data-vali="2"></td>
 				</tr>
 
 
 				<tr>
 					<td>비밀번호 확인:</td>
-					<td><input type="password" id="conpassword" data-vali="2">
-					</td>
+					<td><input class="form-control" type="password"
+						id="conpassword" data-vali="2"></td>
 				</tr>
 
 
 				<tr>
 					<td>e-mail:</td>
-					<td><input type="email" id="signupEmail" data-vali="2">
-					</td>
+					<td><input class="form-control" type="email" id="signupEmail"
+						data-vali="2"></td>
 				</tr>
 
 
 				<tr>
 					<td>별명:</td>
-					<td><input type="text" id="signupNickName" data-vali="2">
-					</td>
+					<td><input class="form-control" type="text"
+						id="signupNickName" data-vali="2"></td>
 				</tr>
 
 				<tr>
 					<td>주민등록번호:</td>
-					<td><input type="number" id="front" data-vali="2"> - <input
-						type="number" id="end" data-vali="2"></td>
+					<td><input class="form-control input" type="number"
+						id="front" data-vali="2"> - <input
+						 type="number" id="end" data-vali="2"></td>
 				</tr>
 
 
 				<tr>
 					<td>폰번호:</td>
-					<td><input type="number" id="signupPhone" data-vali="2"></td>
+					<td><input class="form-control" type="number" id="signupPhone"
+						data-vali="2"></td>
 				</tr>
 
 
 				<tr>
 					<td>관심사 :</td>
 					<td><div id="myform">
-							<input type="checkbox" id="beauty">미용 <input
-								type="checkbox" id="machine">전자기기 <input type="checkbox"
-								id="life">생활<br>
+							<input type="checkbox" id="beauty">미용
+							<input type="checkbox" id="machine">전자기기 <input
+								type="checkbox" id="life">생활<br>
 
 						</div></td>
 
