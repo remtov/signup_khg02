@@ -19,12 +19,12 @@ function findid(){
 	var signupName= document.querySelector('#signupName').value
 	var signupPhone= document.querySelector('#signupPhone').value
 	var params = '';
-	params = 'signupName=' + signupName + '&signupPhone=' + signupPhone;
+	params = 'signupName=' +signupName+ '&signupPhone=' +signupPhone;
 
 	
 		var conf = {
 				url : '/findId',
-				param:params,
+				param : params,
 				success : function(res){
 					if(res!=''){
 					res = JSON.parse(res);
@@ -32,18 +32,12 @@ function findid(){
 					location.href="/url/SignUp:login";
 				}else{
 					alert('회원 이름 또는 폰 번호가 일치하지 않습니다.');
-				}
-				
-					
+				}		
 						}			  
 						
 			}
-	
-		
 		var au = new AjaxUtil(conf);
 		au.send();
-
-
 }
 </script>
 </body>
