@@ -49,10 +49,10 @@ select * from ko_kim_signup
   delete from ko_kim_signup where signupNum=#{signupNum}
   </delete>
   <select id="login" resultType="su">
-        select * from ko_kim_signup where signupid = #{signupid} and signuppassword = #{signuppassword}
+        select * from ko_kim_signup where signupid = #{signupId} and signuppassword = #{signupPassword}
    </select>
  <update id="keepLogin">
-        update ko_kim_signup set sessionKey = #{sessionId}, sessionLimit = #{next} where signupid=#{signupid}
+        update ko_kim_signup set sessionKey = #{sessionId}, sessionLimit = #{next} where signupid=#{signupId}
 </update>
 
  <select id ="selectSignUp2" resultType="su" parameterType="su">
@@ -65,7 +65,7 @@ select * from ko_kim_signup
   <select id ="selectSignUp3" resultType="su" parameterType="su">
    select signupPassword from ko_kim_signup 
   <where>
-  signupname = #{signupName} AND signupphone=#{signupPhone} AND signupid=#{signupid}
+  signupname = #{signupName} AND signupphone=#{signupPhone} AND signupid=#{signupId}
   </where>
  
  </select> 

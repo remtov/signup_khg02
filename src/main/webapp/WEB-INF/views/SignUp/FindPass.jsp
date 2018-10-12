@@ -25,7 +25,7 @@ function findpass(){
 	var signupPhone= document.querySelector('#signupPhone').value
 	var params = '';
 	params = 'signupName=' + signupName + '&signupPhone=' + signupPhone + '&signupId=' + signupId  ;
-
+alert(params);
 	
 		var conf = {
 				url : '/findpass',
@@ -33,7 +33,8 @@ function findpass(){
 				success : function(res){
 					if(res!=''){
 					res = JSON.parse(res);
-					alert(res.signupPassword);	
+					alert('회원님의 아이디는'+res.signupPassword+' 입니다.');	
+					location.href="/url/SignUp:login";
 				}else{
 					alert('아이디 또는 폰 번호 또는 회원 이름가 일치하지 않습니다.');
 				}
