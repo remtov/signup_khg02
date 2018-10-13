@@ -19,26 +19,9 @@
 function loging(){
 	var signupId =document.querySelector('#signupId').value
 	var signupPassword =document.querySelector('#signupPassword').value
-	var params ={signupId:signupId,signupPassword:signupPassword} ;
-	 params = JSON.stringify(params); 
+	var params = {signupId:signupId,signupId:signupId}
+	params = JSON.stringify(params);
 
-	var conf = {
-		url : '/login',
-		method:'post',
-		param:params,
-		success : function(res){
-			alert(res)
-			if(res=='-1'){
-			res = JSON.parse(res);
-			alert(res);	
-			location.href="/url/SignUp:login";
-		}else{
-			alert('아이디 또는 비밀번호가 일치하지 않습니다.');
-		}
-				}			  		
-	}
-var au = new AjaxUtil(conf);
-au.send();
 }
 function loosingId(){
 	location.href="/url/SignUp:find"

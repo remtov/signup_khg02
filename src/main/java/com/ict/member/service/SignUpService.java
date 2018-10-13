@@ -14,5 +14,4 @@ public interface SignUpService {
 	public int deleteSignUpList(int signupNum);
 	public SignUp selectId(SignUp su);
 	public SignUp selectPassword(SignUp su);
-	public int login(SignUp su);
 }
