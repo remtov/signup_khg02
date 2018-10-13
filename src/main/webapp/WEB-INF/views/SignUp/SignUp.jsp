@@ -23,12 +23,16 @@ function agreeCheck(frm)
 </script>
 </head>
 <body>
+
 	<div class="container" style="max-width: 800px;">
 		<div style="text-align: center; margin-bottom: 50px;">
 			<h1>회원가입</h1>
 			<p>
 				이미 회원입니까? <a href="#">로그인</a>
 			</p>
+
+
+
 
 		</div>
 
@@ -88,16 +92,15 @@ function agreeCheck(frm)
 
 
 
+
 			<div class="form-group">
 				<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-
+		
 				<div class="col-sm-10">
 					<input type="email" id="signupEmail" class="form-control"
 						placeholder="이메일 주소를 입력하세요 예)abc@defg.com">
 				</div>
 			</div>
-
-
 
 
 			<div class="form-group">
@@ -139,26 +142,12 @@ function agreeCheck(frm)
 							id="inlineCheckbox3" value="option3"> 생활
 						</label>
 
-
-
-
 					</div>
 				</div>
 			</div>
 
 
-			<!-- ------------------------------------ -->
 
-
-
-
-
-
-			<!-- 체크 -->
-
-			<!-- 체크 -->
-
-			<!-- 버튼 -->
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 
@@ -438,16 +427,15 @@ C. 법적 분쟁을위한 사법 포럼
 
 					<div class="checkbox">
 						<label class="checkbox-inline"> <input type="checkbox"
-							name="agree" onClick="agreeCheck(this.form)">
-							체크하심으로 회원가입을 완료하실 수 있습니다.
+							name="agree" onClick="agreeCheck(this.form)"> 체크하심으로
+							회원가입을 완료하실 수 있습니다.
 
-						</label> 
+						</label>
 					</div>
 				</div>
 			</div>
 			<!-- 버튼 -->
 
-			<!-- ------------------------------------ -->
 
 
 
@@ -456,19 +444,9 @@ C. 법적 분쟁을위한 사법 포럼
 
 			<input class="btn btn-default btn-lg btn-block" type="button"
 				name="checkButton" value=" 확 인 " disabled onclick="saveLevel()">
-	</div>
-	</td>
-
-	</tr>
-
-	</table>
-
-	</form>
 
 
-
-
-
+		</form>
 	</div>
 
 

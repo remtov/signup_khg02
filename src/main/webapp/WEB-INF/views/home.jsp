@@ -869,6 +869,7 @@
 
 		<!-- 정적인클루드방식 -->
 
+
 		<!-- 동적 인클루드방식 -->
 		<%-- 		<jsp:include page="/WEB-INF/views/common/content_final.jspf"
 			flush="false">
@@ -876,6 +877,9 @@
 			사용이 안된다 jspf라서 그런듯 --%>
 		<!-- 동적 인클루드방식 -->
 		<!-- 전체컨테이너 -->
+
+
+
 	</div>
 	<%@ include file="/WEB-INF/views/common/footer.jspf"%>
 

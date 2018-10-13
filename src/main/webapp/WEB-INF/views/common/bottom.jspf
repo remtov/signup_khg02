@@ -27,13 +27,15 @@
 				© 2018 Bong Inc. Bongkun Kim, Yongchan ko, Jinsuk Bae, Hyungoo Kim,
 				All Rights Reserved.</p>
 			<div id="koitta_logo">
-				<a href="http://www.koitt.com/" style="border:0px;"> <img style="height: 30px; width: auto;"
-					src="/img/koitta_logo.gif"></a>
+				<a href="http://www.koitt.com/" style="border: 0px;"> <img
+					style="height: 30px; width: auto;" src="/img/koitta_logo.gif"></a>
 				<!-- <button onclick="location.href='http://www.koitt.com/'"></button> -->
+
 
 			</div>
 
-		</div>
-	</div>
 
+		</div>
+
+	</div>
 </body>
