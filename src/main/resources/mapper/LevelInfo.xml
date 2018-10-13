@@ -68,6 +68,12 @@ select * from ko_kim_signup
   signupname = #{signupName} AND signupphone=#{signupPhone} AND signupid=#{signupId}
   </where>
  
+ </select>
+ <select id ="selectSignUp4" resultType="int" parameterType="su">
+ select count(*) from ko_kim_signup
+ <where>
+ signupid = #{signupId} AND signuppassword=#{signupPassword}
+ </where>
  </select> 
-
+ 
 </mapper>
