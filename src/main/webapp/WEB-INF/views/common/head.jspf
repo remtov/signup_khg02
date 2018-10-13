@@ -128,7 +128,7 @@
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="#">로그인</a></li>
 								<li><a href="/url/SignUp:SignUp">회원가입</a></li>
-								<li><a href="#">Something else here</a></li>
+								<li><a href="/url/SignUp:Admin">관리</a></li>
 								<li class="divider"></li>
 								<li><a href="#">Separated link</a></li>
 							</ul></li>
