@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+
+
+
 /* 일반선택자 */
 body {
 	background-color: #f6f6f6;
@@ -234,6 +237,10 @@ body {
 	color: #777;
 }
 
+#site_map{
+	
+}
+
 /* 경로css 실험 */
 @media ( max-width :800px ) {
 	/* 가로 1200px이하일경우 스마트폰 레이아웃으로 변경 */
@@ -316,3 +323,4 @@ body {
 		width: auto;
 	}
 }
+
