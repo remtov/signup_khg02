@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-
-
-
 /* 일반선택자 */
 body {
 	background-color: #f6f6f6;
@@ -319,4 +316,3 @@ body {
 		width: auto;
 	}
 }
-
