@@ -57,9 +57,11 @@ public class SignUpServiceImpl implements SignUpService {
 	}
 
 	@Override
-	public int login(SignUp su) {
+	public SignUp login(SignUp su) {
 		
 		return sdao.login(su);
 	}
+
+
 
 }

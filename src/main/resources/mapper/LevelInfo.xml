@@ -69,8 +69,8 @@ select * from ko_kim_signup
   </where>
  
  </select>
- <select id ="selectSignUp4" resultType="int" parameterType="su">
- select count(*) from ko_kim_signup
+ <select id ="selectSignUp4" resultType="su" parameterType="su">
+ select * from ko_kim_signup
  <where>
  signupid = #{signupId} AND signuppassword=#{signupPassword}
  </where>

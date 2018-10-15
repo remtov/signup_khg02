@@ -184,7 +184,7 @@
 				xhr.setRequestHeader('content-Type',
 						'application/json; charset=UTF-8');
 			} else {
-				url = url + '?' + param;
+				url = url + '?' + encodeURI(param);
 				xhr.open(method, url);
 			}
 
@@ -192,6 +192,21 @@
 				xhr.send(param);
 			}
 		};
+		function logout(){
+			var conf = {
+					url : '/logout',
+					method : 'post',
+					success : function(res) {
+					
+						if(res == '1'){
+							location.href = '/url/SignUp:login';
+						}
+					}
+					
+				}
+				var au = new AjaxUtil(conf);
+				au.send();
+		}
 
 		/*		html += '<td>' + su.signupNum + '</td>';
 		 html += '<td><input type="text" id="signupName' + su.signupNum +'"value="'+su.signupName+ '"></td>';

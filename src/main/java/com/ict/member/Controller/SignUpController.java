@@ -2,6 +2,9 @@ package com.ict.member.Controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,13 +46,7 @@ public class SignUpController {
 								
 		return sus.insertList(su);
 	}
-	@RequestMapping(value="/login",method=RequestMethod.POST)
-	@ResponseBody
-	public int getLogin(@RequestBody SignUp su) {
-		System.out.println(su);
-		System.out.println(sus.login(su));
-		return sus.login(su);
-	}
+
 	
 	@RequestMapping(value="/Delete/{signupNum}",method=RequestMethod.DELETE)
 	@ResponseBody
@@ -75,6 +72,29 @@ public class SignUpController {
 
 	return sus.selectPassword(su);
 	}
+	  
+	 
+    // 로그아웃
+  	@RequestMapping(value="/logout", method = RequestMethod.POST)
+    public @ResponseBody Integer logout(HttpSession session) {
+        session.invalidate();
+       	return 1;
+    }
+    // 로그인 처리
+    @RequestMapping(value="/dologin", method = RequestMethod.POST)
+    public @ResponseBody SignUp loginProcess(@RequestBody SignUp su, HttpSession session, HttpServletRequest request) {
+        
+        SignUp loginUser = sus.login(su);
+      if(session.getAttribute("userLoginInfo")!=null) {
+    	  session.removeAttribute("userLoginInfo");
+      }
+        if (loginUser != null) {
+            session.setAttribute("userLoginInfo", loginUser);
+        }else {
+        	session.setAttribute("userLoginInfo",null);
+        }
+        return sus.login(su);
+    }
 
 	
 }
