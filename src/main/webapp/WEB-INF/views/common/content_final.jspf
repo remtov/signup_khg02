@@ -5,68 +5,190 @@
 
 <body>
 
-	
 
-		<!-- 제목에쁘게 부트스트랩적용부분 -->
-		<div class="page-header">
-			<h1>
-				근처 인기매물들 <small>가깝고 좋은 매물을 한눈에</small>
-			</h1>
+
+
+
+	<hr style="clear: both;">
+	<h2 style="clear: both;">최신 매물들</h2>
+
+	<div class="row">
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<img src="/img/new01.jpg" alt="...">
+				<div class="caption">
+					<h3>Thumbnail label</h3>
+					<p>adsf sadfasdfa dfasdf asd fasdfasdf asdf asdfasdf sdfas d.</p>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Button</a> <a
+							href="#" class="btn btn-default" role="button">Button</a>
+					</p>
+				</div>
+			</div>
 		</div>
-		<!-- 제목에쁘게 부트스트랩적용부분 -->
 
-		<div class="container"></div>
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<img src="/img/new02.jpg" alt="...">
+				<div class="caption">
+					<h3>Thumbnail label</h3>
+					<p>..asdfasdf asdf sdfadsdf asdfa sdf asdf asdfasdf asdfs df.</p>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Button</a> <a
+							href="#" class="btn btn-default" role="button">Button</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<img src="/img/new03.jpg" alt="...">
+				<div class="caption">
+					<h3>Thumbnail label</h3>
+					<p>..asdfasdfasdfa sdfasdf asdfasdfa sdfasf asdfasd f.</p>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Button</a> <a
+							href="#" class="btn btn-default" role="button">Button</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<img src="/img/new04.jpg" alt="...">
+				<div class="caption">
+					<h3>Thumbanail label</h3>
+					<p>.sdfasdfa sdfsd fasdfasdfasdfasdf asdfsdaf adsf asd
+						fasdfasdf asd fa sdfas..</p>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Button</a> <a
+							href="#" class="btn btn-default" role="button">Button</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+	<div class="row">
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<img src="/img/new05.jpg" alt="...">
+				<div class="caption">
+					<h3>Thumbnail label</h3>
+					<p>adsf sadfasdfa dfasdf asd fasdfasdf asdf asdfasdf sdfas d.</p>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Button</a> <a
+							href="#" class="btn btn-default" role="button">Button</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<img src="/img/new06.jpg" alt="...">
+				<div class="caption">
+					<h3>Thumbnail label</h3>
+					<p>..asdfasdf asdf sdfadsdf asdfa sdf asdf asdfasdf asdfs df.</p>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Button</a> <a
+							href="#" class="btn btn-default" role="button">Button</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<img src="/img/new07.jpg" alt="...">
+				<div class="caption">
+					<h3>Thumbnail label</h3>
+					<p>..asdfasdfasdfa sdfasdf asdfasdfa sdfasf asdfasd f.</p>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Button</a> <a
+							href="#" class="btn btn-default" role="button">Button</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<img src="/img/new08.jpg" alt="...">
+				<div class="caption">
+					<h3>Thumbanail label</h3>
+					<p>.sdfasdfa sdfsd fasdfasdfasdfasdf asdfsdaf adsf asd
+						fasdfasdf asd fa sdfas..</p>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Button</a> <a
+							href="#" class="btn btn-default" role="button">Button</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
 
 
 
 
-		<!-- 데이터베이스 셀렉트 테스트 -->
-
-		<h1>Database SelectList Test</h1>
-		<hr>
 
 
-		<div class="container" style="overflow: auto;">
-			<table class="table table-hover" style="background-color: white;">
-				<thead>
+	<!-- 데이터베이스 셀렉트 테스트 -->
+
+	<h2>Database Test</h2>
+	<hr>
+
+
+	<div class="container" style="overflow: auto;">
+		<table class="table table-hover" style="background-color: white;">
+			<thead>
+				<tr>
+
+					<th>SIGNUPNUM</th>
+					<th>SIGNUPNAME</th>
+					<th>SIGNUPID</th>
+					<th>SIGNUPPASSWORD</th>
+					<th>SIGNUPEMAIL</th>
+					<th>SIGNUPNICKNAME</th>
+					<th>SIGNUPPERSONALLITY</th>
+					<th>SIGNUPPHONE</th>
+					<th>SIGNUPDATE</th>
+					<th>SIGNUPCONCERN</th>
+
+
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${ko_kim_signupList}" var="ko_kim_signup">
 					<tr>
-
-						<th>SIGNUPNUM</th>
-						<th>SIGNUPNAME</th>
-						<th>SIGNUPID</th>
-						<th>SIGNUPPASSWORD</th>
-						<th>SIGNUPEMAIL</th>
-						<th>SIGNUPNICKNAME</th>
-						<th>SIGNUPPERSONALLITY</th>
-						<th>SIGNUPPHONE</th>
-						<th>SIGNUPDATE</th>
-						<th>SIGNUPCONCERN</th>
+						<td>${ko_kim_signup.signupNum}</td>
+						<td>${ko_kim_signup.signupName}</td>
+						<td>${ko_kim_signup.signupId}</td>
+						<td>${ko_kim_signup.signupPassword}</td>
+						<td>${ko_kim_signup.signupEmail}</td>
+						<td>${ko_kim_signup.signupNickName}</td>
+						<td>${ko_kim_signup.signupPersonallity}</td>
+						<td>${ko_kim_signup.signupPhone}</td>
+						<td>${ko_kim_signup.signupDate}</td>
+						<td>${ko_kim_signup.signupConcern}</td>
 
 
 					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${ko_kim_signupList}" var="ko_kim_signup">
-						<tr>
-							<td>${ko_kim_signup.signupNum}</td>
-							<td>${ko_kim_signup.signupName}</td>
-							<td>${ko_kim_signup.signupId}</td>
-							<td>${ko_kim_signup.signupPassword}</td>
-							<td>${ko_kim_signup.signupEmail}</td>
-							<td>${ko_kim_signup.signupNickName}</td>
-							<td>${ko_kim_signup.signupPersonallity}</td>
-							<td>${ko_kim_signup.signupPhone}</td>
-							<td>${ko_kim_signup.signupDate}</td>
-							<td>${ko_kim_signup.signupConcern}</td>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
 
-
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- 데이터베이스 셀렉트 테스트 -->
+	<!-- 데이터베이스 셀렉트 테스트 -->
 
 
 
