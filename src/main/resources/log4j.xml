@@ -12,7 +12,7 @@
 	
 	<!-- Application Loggers -->
 	<logger name="com.ict.member">   
-		<level value="info" /> 
+		<level value="debug" /> 
 	</logger>
 	<logger name="jdbc.sqlonly">   
 		<level value="debug" /> 
