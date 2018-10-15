@@ -1,36 +1,110 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>Insert title here</title>
+<title>정보 수정 페이지</title>
+<style>
+th {
+	text-align: right;
+}
+
+tr {
+	/* border: 1px solid black; */
+	height: 50px;
+}
+
+td {
+	
+}
+</style>
+
 </head>
 <body>
 
-<table>
-<c:set value="${getOne}" var="li"/>
-		<tr><th>회원 번호</th><td id="signupNum">${li.signupNum}</td></tr>
-		<tr><th>회원 이름</th><td><input type="text" id="signupName" value="${li.signupName}"></td></tr>
-		<tr><th>회원id</th><td><input type="text" id="signupId" value="${li.signupId}"></td></tr>
-		<tr><th>회원 비밀번호</th><td><input type="text" id="signupPassword" value="${li.signupPassword}"></td></tr>
-		<tr><th>회원 별명</th><td><input type="text" id="signupNickName" value="${li.signupNickName}"></td></tr>
-		<tr><th>회원 email</th><td><input type="text" id="signupEmail" value="${li.signupEmail}"></td></tr>
-		<tr><th>회원가입 일자</th><td><input type="text" id="signupDate" value="${li.signupDate}"></td></tr>
-		<tr><th>회원 관심사</th><td><input type="text" id="signupConcern" value="${li.signupConcern}"></td></tr>
-		<tr><th>회원 주민등록번호</th><td><input type="text" id="signupPersonallity" value="${li.signupPersonallity}"></td></tr>
-		<tr><th>회원폰번호</th><td><input type="text" id="signupPhone" value="${li.signupPhone}"></td></tr>
-</table>
-<div>
-<button type="button" onclick="Delete()">삭제</button>
-<button type="button" onclick="Update()">수정</button>
-<button type="button" onclick="Back()">뒤로가기</button>
-</div>
+	<div class="container" style="max-width: 800px;">
+		<div style="text-align: center; margin-bottom: 50px;">
+			<h1>회원정보 수정</h1>
+			<p>
+				이전페이지로 돌아 가시겠습니까? <a onclick="Back()">돌아가기</a>
+			</p>
+
+		</div>
 
 
-<script>
+
+
+
+		<table>
+			<c:set value="${getOne}" var="li" />
+			<tr>
+				<th class="col-md-2">회원 번호</th>
+				<td colspan="2" class="col-md-10" id="signupNum">${li.signupNum}</td>
+			</tr>
+			<tr>
+				<th class="col-md-2">회원 이름</th>
+				<td colspan="2" class="col-md-10"><input class="form-control"
+					type="text" id="signupName" value="${li.signupName}"></td>
+			</tr>
+			<tr>
+				<th class="col-md-2">회원id</th>
+				<td colspan="2" class="col-md-10"><input class="form-control"
+					type="text" id="signupId" value="${li.signupId}"></td>
+			</tr>
+			<tr>
+				<th class="col-md-2">회원 비밀번호</th>
+				<td colspan="2" class="col-md-10"><input class="form-control"
+					type="text" id="signupPassword" value="${li.signupPassword}"></td>
+			</tr>
+			<tr>
+				<th class="col-md-2">회원 별명</th>
+				<td colspan="2" class="col-md-10"><input class="form-control"
+					type="text" id="signupNickName" value="${li.signupNickName}"></td>
+			</tr>
+			<tr>
+				<th class="col-md-2">회원 email</th>
+				<td colspan="2" class="col-md-10"><input class="form-control"
+					type="text" id="signupEmail" value="${li.signupEmail}"></td>
+			</tr>
+			<tr>
+				<th class="col-md-2">회원가입 일자</th>
+				<td colspan="2" class="col-md-10"><input class="form-control"
+					type="text" id="signupDate" value="${li.signupDate}"></td>
+			</tr>
+			<tr>
+				<th class="col-md-2">회원 관심사</th>
+				<td colspan="2" class="col-md-10"><input class="form-control"
+					type="text" id="signupConcern" value="${li.signupConcern}"></td>
+			</tr>
+			<tr>
+				<th class="col-md-2">회원 주민등록번호</th>
+				<td colspan="2" class="col-md-10"><input class="form-control"
+					type="text" id="signupPersonallity"
+					value="${li.signupPersonallity}"></td>
+			</tr>
+			<tr>
+				<th class="col-md-2">회원폰번호</th>
+				<td colspan="2" class="col-md-10"><input class="form-control"
+					type="text" id="signupPhone" value="${li.signupPhone}"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button class="form-control" type="button" onclick="Update()">수정</button>
+				</td>
+				<td><button class="form-control" type="button"
+						onclick="Delete()">삭제</button></td>
+
+			</tr>
+
+		</table>
+		<div></div>
+	</div>
+
+	<script>
 function Back(){
 	location.href="/url/SignUp:Admin"
 }

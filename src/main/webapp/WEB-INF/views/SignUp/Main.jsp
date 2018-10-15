@@ -1,74 +1,40 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>Insert title here</title>
+<title>Page Not Found 404</title>
 </head>
-<body>
 
-<h1>Sign Up for join</h1>
-<div>
-<textarea rows="10" cols="">사용하고자 하는 아이디와 이를 동의한다면 하단의 동의함을 누르신 후 사용하세요</textarea>
-<div >
-<input type="checkbox" id="agree" value="agree" style="vertical-align: right">동의함
-</div>
-</div>
+<body style="background-color: white;">
+	<div
+		style="width: 100%; background-color: #f6f6f6; height: 300px; margin-bottom: -30px; margin-top: -30px;">
 
-이름: <input type ="text" id="name"><br>
-아이디: <input type ="text" id="id"><br>
-비밀번호: <input type ="password" id="password"><br>
-비밀번호 확인: <input type ="password" id="conpassword"><br>
-e-mail: <input type ="email" id="email"><br>
-별명: <input type ="text" id="nickname"><br>
-주민등록번호: <input type ="number" id="front"> - <input type ="number" id="end"><br>
-폰번호: <input type ="number" id="phone"><br>
+		<div class="container" style="max-width: 800px;">
+			<div style="text-align: center; margin-bottom: 50px;"></div>
+			<h1 style="margin-top:100px;">죄송합니다. 아직 제작중입니다.</h1>
+			
+			<p>
+				처음으로 돌아가려면 <a href="/">여기</a>를 클릭하십시오. 도움이 필요하시다면 <a href="#">헬프데스크</a>로
+				안내하겠습니다.
+			</p>
 
-관심사 :<form>
-  <div class="checkboxes">
-    <label for="beauty"><input type="checkbox" id="beauty" /> <span>미용</span></label>
-    <label for="machine"><input type="checkbox" id="machine" /> <span>전자기기</span></label>
-    <label for="life"><input type="checkbox" id="life" /> <span>생활</span></label>
-  </div>
-</form>
+		</div>
+	</div>
 
-<label for="chkPassport">
-    <input type="checkbox" id="chkPassport" />
-    Do you have Passport?
-</label>
-<hr />
-<div id="dvPassport" style="display: none">
-    Passport Number:
-    <input type="text" id="txtPassportNumber" />
-</div>
-<div id="AddPassport">
-    Add New Password
-</div>
-<script>
 
-function checked(){
-	if($('input:checkbox[id="agree"]').is(":checked") == true){
-		
-	}
 
-}
-$(function () {
-    $("#chkPassport").click(function () {
-        if ($(this).is(":checked")) {
-            $("#dvPassport").show();
-            $("#AddPassport").hide();
-        } else {
-            $("#dvPassport").hide();
-            $("#AddPassport").show();
-        }
-    });
-});
-
-</script>
 </body>
 </html>
+
+
+
+</body>
+</html>
+
+
 
 
 

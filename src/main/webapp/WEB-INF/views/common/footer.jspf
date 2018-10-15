@@ -11,7 +11,7 @@
 
 			<div class="col-md-3">
 				<div class="list-group">
-					<a href="#" class="list-group-item disabled"> 물건사기</a> <a href="#"
+					<a href="#" class="list-group-item disabled"> 물건사기</a> <a href="/url/SignUp:SignUp"
 						class="list-group-item">회원가입</a> <a href="#"
 						class="list-group-item">입찰 및 구매</a> <a href="#"
 						class="list-group-item">도움말</a> <a href="#"
