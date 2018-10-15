@@ -12,7 +12,7 @@ public class SignUp {
 	private String signupNickName;
 	private String signupPersonallity;
 	private String signupPhone;
-	private Integer signupDate;
+	private String signupDate;
 	private String signupConcern;
 	
 	@Override
@@ -87,11 +87,11 @@ public class SignUp {
 		this.signupPhone = signupPhone;
 	}
 
-	public Integer getSignupDate() {
+	public String getSignupDate() {
 		return signupDate;
 	}
 
-	public void setSignupDate(Integer signupDate) {
+	public void setSignupDate(String signupDate) {
 		this.signupDate = signupDate;
 	}
 
@@ -104,7 +104,7 @@ public class SignUp {
 	}
 
 	public SignUp(Integer signupNum, String signupName, String signupId, String signupPassword, String signupEmail,
-			String signupNickName, String signupPersonallity, String signupPhone, Integer signupDate,
+			String signupNickName, String signupPersonallity, String signupPhone, String signupDate,
 			String signupConcern) {
 		super();
 		this.signupNum = signupNum;

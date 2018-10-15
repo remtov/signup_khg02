@@ -89,7 +89,7 @@ div {
 					</table>
 				</div>
 				<hr>
- <button type="button" onclick="logout()">로그아웃</button>
+
 
 				<div
 					style="background-color: white; height: 400px; margin-top: 20px;">인포1</div>
@@ -141,15 +141,7 @@ div {
 
 
 	<script>
-	function logout(){
-		var conf = {
-				url : '/logout',
-				method : 'post'
-				
-			}
-			var au = new AjaxUtil(conf);
-			au.send();
-	}
+
 
 	function search(){
 

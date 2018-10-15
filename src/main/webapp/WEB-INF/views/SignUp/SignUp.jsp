@@ -137,7 +137,7 @@ function agreeCheck(frm)
 			<div class="form-group">
 				<label for="myform" class="col-sm-2 control-label">관심사</label>
 
-				<div class="col-sm-10" style="margin-top: -7px;">
+				<div class="col-sm-10" style="margin-top: 7px;">
 					<div id="myform">
 						<input type="checkbox" id="beauty">미용 <input
 							type="checkbox" id="machine">전자기기 <input type="checkbox"
@@ -470,7 +470,7 @@ C. 법적 분쟁을위한 사법 포럼
 			<hr>
 
 			<input class="btn btn-default btn-lg btn-block" type="button"
-				name="checkButton" value=" 확 인 " disabled onclick="saveLevel()">
+				name="checkButton" value=" 확 인 " disabled onclick="save()">
 
 		</form>
 
@@ -486,7 +486,7 @@ C. 법적 분쟁을위한 사법 포럼
 	<script>
 
 
-function saveLevel(){
+function save(){
 
 	var signupName = document.querySelector('#signupName').value;
 	var signupId = document.querySelector('#signupId').value;
@@ -505,12 +505,6 @@ function saveLevel(){
      setChk += "생활,";
     }
     setChk = setChk.substr(0, setChk.length-1);
-  
-	
-	
-	
-	
-	
 	var valis = document.querySelectorAll('*[data-vali]');
 	
 	valis.forEach((e) => {

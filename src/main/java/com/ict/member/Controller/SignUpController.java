@@ -56,8 +56,19 @@ public class SignUpController {
 	}
 	@RequestMapping(value="/update/{signupNum}",method=RequestMethod.PUT)
 	@ResponseBody
-	public Integer updateLevelInfo(@RequestBody SignUp su,@PathVariable Integer signupNum) {
+	public Integer updateLevelInfo(@RequestBody SignUp su,@PathVariable Integer signupNum,HttpSession session, HttpServletRequest request) {
 		su.setSignupNum(signupNum);
+		sus.updateList(su);
+		 SignUp loginUser = sus.login(su);
+		if(session.getAttribute("userLoginInfo")!=null) {
+	    	  session.removeAttribute("userLoginInfo");
+	      }
+	        if (loginUser != null) {
+	            session.setAttribute("userLoginInfo", loginUser);
+	        }else {
+	        	session.setAttribute("userLoginInfo",null);
+	        }
+		
 		return sus.updateList(su);
 		
 	}

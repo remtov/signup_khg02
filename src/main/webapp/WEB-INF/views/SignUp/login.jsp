@@ -12,13 +12,7 @@
 
 	<div style="width:100%; background-color: #f6f6f6; height:500px; margin-bottom:-30px; margin-top:-30px; ">
 	<div class="container" style="max-width: 800px;">
-		<div style="text-align: center; margin-bottom: 50px;">
-			<h1>로그인</h1>
-			<p>
-				아직 가입하지 않으셨습니까? <a onclick="signUp()">회원가입</a>
-			</p>
-			<br>
-		</div>
+
 <c:choose>
     <c:when test="${not empty sessionScope.userLoginInfo}">
         <h2>로그인 성공 </h2>
@@ -26,9 +20,16 @@
  
         이메일 : <c:out value="${sessionScope.userLoginInfo.signupEmail}"/> 
        <button type="button" onclick="logout()">로그아웃</button>
-       
+       <button type="button" onclick="location.href='/url/SignUp:MyPage'">마이페이지</button>
     </c:when>
 <c:otherwise>
+		<div style="text-align: center; margin-bottom: 50px;">
+			<h1>로그인</h1>
+			<p>
+				아직 가입하지 않으셨습니까? <a onclick="signUp()">회원가입</a>
+			</p>
+			<br>
+		</div> 
 		<form id="login" class="form-horizontal">
 			<div class="form-group">
 				<label for="signupId" class="col-sm-2 control-label">아이디</label>
@@ -83,7 +84,7 @@
 
 
 	<script>
-
+		
 		function loging() {
 			var signupId = document.querySelector('#signupId').value
 			var signupPassword = document.querySelector('#signupPassword').value
@@ -101,7 +102,7 @@
 				success:function(res){
 					if(res!=''){
 						alert('로그인이 완료되셨습니다.');
-						location.href="/url/SignUp:login";
+						location.href="/";
 					}else{
 						logout();
 						location.href="/url/SignUp:login";
