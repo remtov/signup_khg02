@@ -520,12 +520,10 @@
 
 
 
-		<div class="page-header">
-			<h1>
-				최고 입찰상품 <small> Today's Most Popular Collections </small>
-			</h1>
-		</div>
 
+
+		<h2 style="margin-top:60px;">최고 입찰상품</h2>
+		<hr>
 
 		<!-- 왼쪽컨텐츠 1열 -->
 		<div class="contentLeft" style="position: relative;">
