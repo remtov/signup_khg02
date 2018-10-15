@@ -30,7 +30,7 @@
 	<mvc:resources mapping="/css/**" location="/rsc/css/"/>
 	<mvc:resources mapping="/js/**" location="/rsc/js/"/>
 	<mvc:resources mapping="/img/**" location="/rsc/img/"/>
-	<mvc:resources mapping="/codebase/**" location="/rsc/codebase/"/>
+	<mvc:resources mapping="/dhtmlx/**" location="/rsc/dhtmlx/"/>
 	
 
 	<!-- 리소스생략 로직 -->

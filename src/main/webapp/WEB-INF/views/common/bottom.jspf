@@ -21,7 +21,7 @@
 <body>
 
 
-	<div style="margin-top:300px; bottom:0px; position:relative; left:50%; margin-left:-50%; width:100%;">
+	<div style="background-color: white; bottom:0px; position:relative; left:50%; margin-left:-50%; width:100%;">
 		<hr>
 		<div class="container" style="height: 150px;">
 

@@ -30,20 +30,20 @@
 
 
 
-<%-- 
+
 <!-- dhtmlx 영역 -->
 
 
 
 <link rel="stylesheet" type="text/css"
-	href="<%=rootPath%>/codebase/fonts/font_roboto/roboto.css" />
+	href="<%=rootPath%>/dhtmlx/fonts/font_roboto/roboto.css" />
 <link rel="stylesheet" type="text/css"
-	href="<%=rootPath%>/codebase/dhtmlx.css" />
-<script src="<%=rootPath%>/codebase/dhtmlx.js"></script>
+	href="<%=rootPath%>/dhtmlx/dhtmlx.css" />
+<script src="<%=rootPath%>/dhtmlx/dhtmlx.js"></script>
 
 
 
-<!-- dhtmlx 영역 --> --%>
+<!-- dhtmlx 영역 -->
 
 
 </head>
