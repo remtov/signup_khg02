@@ -8,8 +8,6 @@
 <title>Page Not Found 404</title>
 </head>
 
-<<<<<<< HEAD
-=======
 <body style="background-color: white;">
 	<div
 		style="width: 100%; background-color: #f6f6f6; height: 300px; margin-bottom: -30px; margin-top: -30px;">
@@ -27,8 +25,6 @@
 	</div>
 
 
-
->>>>>>> branch 'master' of https://github.com/akakanslzk2/Signup.git
 </body>
 </html>
 
