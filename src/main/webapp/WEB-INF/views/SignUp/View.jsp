@@ -42,7 +42,7 @@ td {
 			<c:set value="${getOne}" var="li" />
 			<tr>
 				<th class="col-md-2">회원 번호</th>
-				<td colspan="2" class="col-md-10" id="signupNum">${li.signupNum}</td>
+				<td colspan="2" class="col-md-10" id="signupNum"><input class="form-control" type="text" id="signupNum" value ="${li.signupNum}" disabled></td>
 			</tr>
 			<tr>
 				<th class="col-md-2">회원 이름</th>

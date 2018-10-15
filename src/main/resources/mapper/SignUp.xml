@@ -55,22 +55,22 @@ select * from ko_kim_signup
         update ko_kim_signup set sessionKey = #{sessionId}, sessionLimit = #{next} where signupid=#{signupId}
 </update>
 
- <select id ="selectSignUp2" resultType="su" parameterType="su">
+ <select id ="selectSignUpId" resultType="su" parameterType="su">
    select signupid from ko_kim_signup 
   <where>
   signupname = #{signupName} AND signupphone=#{signupPhone}
   </where>
  
  </select> 
-  <select id ="selectSignUp3" resultType="su" parameterType="su">
+  <select id ="selectSignUpPassword" resultType="su" parameterType="su">
    select signupPassword from ko_kim_signup 
   <where>
   signupname = #{signupName} AND signupphone=#{signupPhone} AND signupid=#{signupId}
   </where>
  
  </select>
- <select id ="selectSignUp4" resultType="su" parameterType="su">
- select * from ko_kim_signup
+ <select id ="selectSignUpLogin" resultType="su" parameterType="su">
+ select signupname,signupNum,signupid,signupnickname,signupemail,signupphone,signupconcern from ko_kim_signup
  <where>
  signupid = #{signupId} AND signuppassword=#{signupPassword}
  </where>
