@@ -109,11 +109,11 @@
 							</ul></li>
 					</ul>
 					검색창이전메뉴들
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 					검색창과 서밋버튼
 					<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
@@ -128,43 +128,141 @@
 
 
 					<!-- 오른쪽정렬메뉴들 -->
+
+					<!-- 영찬이코드  -->
+					<c:set var="userid" value="${userLoginInfo.signupId}"></c:set>
 					<c:choose>
-    				<c:when test="${not empty sessionScope.userLoginInfo}">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">${userLoginInfo.signupName}님 환영합니다.</a></li> 
-						<li><a href="#">내 물건팔기</a></li>
-						<li><a href="#">장바구니</a></li>
-						<li class="dropdown">
-						<a href="#" class="dropdown-toggle" 
-							data-toggle="dropdown" role="button" aria-expanded="false">
-								회원정보<span class="caret"></span>
-						</a>
+						<c:when test="${not empty sessionScope.userLoginInfo}">
+							<!-- 세션이있는 모든사람들에게 보이는 메뉴 -->
 
-							<ul class="dropdown-menu" role="menu">
-								<li><button type="button" onclick="logout()">로그아웃</button></li>
 
-								<li class="divider"></li>
-								<li><a href="/url/SignUp:MyPage">마이페이지</a></li>
-							</ul></li>
-					</ul>
-					  </c:when>
-   					 <c:otherwise>
-   					 	<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-						<a href="#" class="dropdown-toggle"
-							data-toggle="dropdown" role="button" aria-expanded="false">
-								회원정보<span class="caret"></span>
-						</a>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#">오늘의 추천거래</a></li>
+								<li><a href="#">내 물건 팔기</a></li>
+								<li><a href="#">도움말 및 문의</a></li>
 
-							<ul class="dropdown-menu" role="menu">
+
+
+
+								<li class="dropdown"><a href="#" class="dropdown-toggle"
+									data-toggle="dropdown" role="button" aria-expanded="false">
+										나의 <img src="/img/logo.png" style="width: 30px; height: auto;"><span
+										class="caret"></span>
+								</a>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="#">대시보드</a></li>
+										<li class="divider"></li>
+										<li><a href="#">최근이용내역</a></li>
+										<li><a href="#">구매내역</a></li>
+										<li><a href="#">저장된컨텐츠</a></li>
+										<li><a href="#">저장된판매자</a></li>
+										<li><a href="#">입찰</a></li>
+										<li><a href="#">판매</a></li>
+									</ul></li>
+
+
+
+
+
+
+
+
+
+
+
+
+								<li class="dropdown"><a href="#" class="dropdown-toggle"
+									data-toggle="dropdown" role="button" aria-expanded="false">
+										<b>${userLoginInfo.signupName}</b>님 환영합니다.<img
+										src="/img/icon_profile.png" style="height: 17px; width: auto;">
+										<span class="caret"></span>
+								</a>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="/url/SignUp:MyPage">계정설정</a></li>
+										<!-- 마이페이지역할에해당 -->
+
+										<li><a onclick="logout()">로그아웃</a></li>
+										<!-- 관리자에 해당하는 내용분기점 -->
+										<c:if test="${userLoginInfo.signupId =='고영찬'}">
+											<li><a href="/url/SignUp:Admin">관리자 페이지</a></li>
+										</c:if>
+										<!-- 관리자에 해당하는 내용분기점 -->
+
+									</ul></li>
+
+								<!-- 종모양 -->
+								<li><a href="#"> <img src="/img/icon_bell.png"
+										style="height: 17px; width: auto;"></a></li>
+								<!-- 종모양 -->
+
+								<!-- 쇼핑카트모양 -->
+
+								<li><a href="#"><img src="/img/icon_shopping_cart.png"
+										style="height: 17px; width: auto;"></a></li>
+								<!-- 쇼핑카트모양 -->
+
+
+							</ul>
+
+							<!-- 여기까지 세션이있는사람에대한 화면내용 -->
+						</c:when>
+						<c:otherwise>
+
+
+
+							<!-- 여기는 세션이 없는 사람에대한 내용 -->
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#">오늘의 추천거래</a></li>
+								<li><a href="#">내 물건 팔기</a></li>
+								<li><a href="#">도움말 및 문의</a></li>
+
+								<li class="dropdown"><a href="#" class="dropdown-toggle"
+									data-toggle="dropdown" role="button" aria-expanded="false">
+										나의 <img src="/img/logo.png" style="width: 30px; height: auto;"><span
+										class="caret"></span>
+								</a>
+
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="#">대시보드</a></li>
+										<li class="divider"></li>
+										<li><a href="#">최근이용내역</a></li>
+										<li><a href="#">구매내역</a></li>
+										<li><a href="#">저장된컨텐츠</a></li>
+										<li><a href="#">저장된판매자</a></li>
+										<li><a href="#">입찰</a></li>
+										<li><a href="#">판매</a></li>
+
+
+
+
+									</ul></li>
+
 								<li><a href="/url/SignUp:login">로그인</a></li>
-								<li><a href="/url/SignUp:SignUp">회원가입</a></li>
-								<li class="divider"></li>
-							</ul></li>
-					</ul>
-   					 </c:otherwise>
+
+								<li><a href="/url/SignUp:SignUp">가입</a></li>
+
+								<!-- 종모양 -->
+								<li><a href="#"> <img src="/img/icon_bell.png"
+										style="height: 17px; width: auto;"></a></li>
+								<!-- 종모양 -->
+
+								<!-- 쇼핑카트모양 -->
+
+								<li><a href="#"><img src="/img/icon_shopping_cart.png"
+										style="height: 17px; width: auto;"></a></li>
+								<!-- 쇼핑카트모양 -->
+
+
+							</ul>
+							<!-- 여기는 세션이 없는 사람에대한 내용 -->
+
+						</c:otherwise>
 					</c:choose>
+
+
 					<!-- 오른쪽정렬메뉴들 -->
+
+
 				</div>
 
 				<!-- 줄어들명 몽땅 아이콘되는영역 -->
@@ -212,20 +310,20 @@
 				xhr.send(param);
 			}
 		};
-		function logout(){
+		function logout() {
 			var conf = {
-					url : '/logout',
-					method : 'post',
-					success : function(res) {
-					
-						if(res == '1'){
-							location.href = '/url/SignUp:login';
-						}
+				url : '/logout',
+				method : 'post',
+				success : function(res) {
+
+					if (res == '1') {
+						location.href = '/url/SignUp:login';
 					}
-					
 				}
-				var au = new AjaxUtil(conf);
-				au.send();
+
+			}
+			var au = new AjaxUtil(conf);
+			au.send();
 		}
 
 		/*		html += '<td>' + su.signupNum + '</td>';
