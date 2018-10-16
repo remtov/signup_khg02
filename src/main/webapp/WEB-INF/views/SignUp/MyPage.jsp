@@ -116,7 +116,7 @@
 								<tr>
 									<td>이름</td>
 									<td><input class="form-control" style="margin-top: 5px"
-										type="text" id="signupId" value="${userLoginInfo.signupId}"
+										type="text" id="signupName" value="${userLoginInfo.signupName}"
 										data-vali="2"></td>
 								</tr>
 								<tr>

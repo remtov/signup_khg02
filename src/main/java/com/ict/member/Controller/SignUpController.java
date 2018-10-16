@@ -37,6 +37,7 @@ public class SignUpController {
 	@RequestMapping(value="/SignUpView/{SignNum}",method=RequestMethod.GET)
 	public String getSignUpOne(Model m ,@PathVariable Integer SignNum) {
 	m.addAttribute("getOne",sus.selectOneSignUpList(SignNum));
+	
 	return "SignUp/View";
 	}
 	
@@ -54,11 +55,18 @@ public class SignUpController {
 	
 		return sus.deleteSignUpList(signupNum);
 	}
+	@RequestMapping(value="/updatevil/{signupNum}",method=RequestMethod.PUT)
+	@ResponseBody
+	public Integer updateLevelInfo(@RequestBody SignUp su,@PathVariable Integer signupNum) {
+		su.setSignupNum(signupNum);
+		return sus.updateList(su);
+	}
 	@RequestMapping(value="/update/{signupNum}",method=RequestMethod.PUT)
 	@ResponseBody
-	public Integer updateLevelInfo(@RequestBody SignUp su,@PathVariable Integer signupNum,HttpSession session, HttpServletRequest request) {
+	public Integer updateLevelInfo2(@RequestBody SignUp su,@PathVariable Integer signupNum,HttpSession session, HttpServletRequest request) {
 		su.setSignupNum(signupNum);
 		sus.updateList(su);
+	
 		 SignUp loginUser = sus.login(su);
 		if(session.getAttribute("userLoginInfo")!=null) {
 	    	  session.removeAttribute("userLoginInfo");

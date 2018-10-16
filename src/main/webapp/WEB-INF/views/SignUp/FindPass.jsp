@@ -32,9 +32,9 @@
 			<form class="form-horizontal" style="margin-top: 40px;">
 
 				<div class="form-group">
-					<label for="signupName" class="col-sm-2 control-label">아이디</label>
+					<label for="signupId" class="col-sm-2 control-label">아이디</label>
 					<div class="col-sm-10">
-						<input type="text" id="signupName" data-vali="2"
+						<input type="text" id="signupId" data-vali="2"
 							class="form-control" placeholder="아이디를 입력하세요.">
 					</div>
 				</div>

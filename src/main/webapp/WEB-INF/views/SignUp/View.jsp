@@ -142,7 +142,7 @@ function  Update(){
 
 		var conf = {
 				
-				url : '/update/'+ ${li.signupNum},
+				url : '/updatevil/'+ ${li.signupNum},
 				method :'PUT',
 				param : params,
 				success:function(res){
