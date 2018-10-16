@@ -73,7 +73,7 @@
 				param : params,
 				success : function(res) {
 
-					if (res !='') {
+					if (res != '') {
 						res = JSON.parse(res);
 						alert('회원님의 아이디는' + res.signupId + ' 입니다.');
 						location.href = "/url/SignUp:login";
