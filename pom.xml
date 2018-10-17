@@ -43,6 +43,16 @@
 
 	<dependencies>
 
+		<!-- 롬복 -->
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.22</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- 롬복 -->
+
 		<!-- Spring MVC -->
 		<dependency>
 			<groupId>org.springframework</groupId>
