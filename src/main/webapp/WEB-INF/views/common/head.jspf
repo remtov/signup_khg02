@@ -45,7 +45,17 @@
 
 <!-- dhtmlx 영역 -->
 
+<style>
+.head-nav_menu-img {
+	width: 30px;
+	height: auto;
+}
 
+.head-menu_menu-img--h17 {
+	height: 17px;
+	width: auto;
+}
+</style>
 </head>
 
 
@@ -146,8 +156,8 @@
 
 								<li class="dropdown"><a href="#" class="dropdown-toggle"
 									data-toggle="dropdown" role="button" aria-expanded="false">
-										나의 <img src="/img/logo.png" style="width: 30px; height: auto;"><span
-										class="caret"></span>
+										나의 <img class="head-nav_menu-img" src="/img/logo.png"
+										style="width: 30px; height: auto;"><span class="caret"></span>
 								</a>
 									<ul class="dropdown-menu" role="menu">
 										<li><a href="#">대시보드</a></li>
@@ -191,14 +201,14 @@
 									</ul></li>
 
 								<!-- 종모양 -->
-								<li><a href="#"> <img src="/img/icon_bell.png"
-										style="height: 17px; width: auto;"></a></li>
+								<li><a href="#"> <img class="head-menu_menu-img--h17"
+										src="/img/icon_bell.png"></a></li>
 								<!-- 종모양 -->
 
 								<!-- 쇼핑카트모양 -->
 
-								<li><a href="#"><img src="/img/icon_shopping_cart.png"
-										style="height: 17px; width: auto;"></a></li>
+								<li><a href="#"><img class="head-menu_menu-img--h17"
+										src="/img/icon_shopping_cart.png"></a></li>
 								<!-- 쇼핑카트모양 -->
 
 
@@ -218,7 +228,7 @@
 
 								<li class="dropdown"><a href="#" class="dropdown-toggle"
 									data-toggle="dropdown" role="button" aria-expanded="false">
-										나의 <img src="/img/logo.png" style="width: 30px; height: auto;"><span
+										나의 <img src="/img/logo.png" class="head-nav_menu-img"><span
 										class="caret"></span>
 								</a>
 
@@ -243,13 +253,13 @@
 
 								<!-- 종모양 -->
 								<li><a href="#"> <img src="/img/icon_bell.png"
-										style="height: 17px; width: auto;"></a></li>
+										class="head-menu_menu-img--h17"></a></li>
 								<!-- 종모양 -->
 
 								<!-- 쇼핑카트모양 -->
 
 								<li><a href="#"><img src="/img/icon_shopping_cart.png"
-										style="height: 17px; width: auto;"></a></li>
+										class="head-menu_menu-img--h17"></a></li>
 								<!-- 쇼핑카트모양 -->
 
 

@@ -11,15 +11,35 @@ a {
 h5 a {
 	font-size: 1.1em;
 }
+
+.footer-container {
+	background-color: white;
+}
+
+.footer-container>div {
+	height: auto;
+}
+
+.footer-container>div>div {
+	margin-bottom: 50px;
+}
+
+.footer_remover--gray-line {
+	/* position: absolute;  */
+	height: 100px;
+	margin-bottom: -100px;
+	width: 100%;
+	background-color: white;
+}
 </style>
 <body>
 
-	<div style="background-color: white;">
+	<div class="footer-container">
 		<hr>
-		<div class="container" style="height: auto;">
+		<div class="container">
 
-			
-			<div class="col-md-2" style="margin-bottom: 50px;">
+
+			<div class="col-md-2">
 				<h5>
 					<a href="#">물건팔기</a>
 				</h5>
@@ -28,7 +48,7 @@ h5 a {
 				<a href="#">제휴사 </a><br>
 
 			</div>
-			
+
 
 			<div class="col-md-2">
 
@@ -36,11 +56,10 @@ h5 a {
 					<a href="#">물건사기</a>
 				</h5>
 				<a href="#">회원가입</a><br> <a href="#">입찰 및 구매 </a><br> <a
-					href="#">도움말 </a><br> <a href="#">배달</a><br>
-				<br>
+					href="#">도움말 </a><br> <a href="#">배달</a><br> <br>
 
 			</div>
-			
+
 
 			<div class="col-md-2">
 				<h5>
@@ -51,8 +70,8 @@ h5 a {
 					href="#">센터</a><br>
 
 			</div>
-			
-			
+
+
 
 			<div class="col-md-2">
 
@@ -64,8 +83,8 @@ h5 a {
 				<a href="#">개인프로젝트4 </a><br>
 
 			</div>
-			
-			
+
+
 
 
 			<div class="col-md-2">
@@ -87,8 +106,7 @@ h5 a {
 					<a href="#">도움말 및 문의</a>
 				</h5>
 				<a href="#">고객불만센터 </a><br> <a href="#">자주하는 문의 </a><br> <a
-					href="#">문의하기 </a><br>
-				<br>
+					href="#">문의하기 </a><br> <br>
 
 				<h5>
 					<a href="#">SNS</a>
@@ -100,12 +118,11 @@ h5 a {
 
 		</div>
 		<!-- 사이의 회색여백없에기 div -->
-		<div
-			style="position: absolute; height: 100px; bottom: -100 px; width: 100%; background-color: white;"></div>
+
 		<!-- 사이의 회색여백없에기 div -->
 
 
 
 	</div>
-
+	<div class="footer_remover--gray-line"></div>
 </body>
