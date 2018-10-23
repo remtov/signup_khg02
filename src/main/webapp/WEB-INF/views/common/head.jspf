@@ -19,13 +19,13 @@
 <title>bong Auction</title>
 
 <!-- 부트스트랩 -->
-<link href="<%=rootPath%>/css/bootstrap.min.css" rel="stylesheet">
+<link href="<%=rootPath%>/rsc/css/bootstrap.min.css" rel="stylesheet">
 <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="<%=rootPath%>/js/bootstrap.min.js"></script>
+<script src="<%=rootPath%>/rsc/js/bootstrap.min.js"></script>
 <!-- 개인CSS -->
-<link rel="stylesheet" href="<%=rootPath%>/css/style.css">
+<link rel="stylesheet" href="<%=rootPath%>/rsc/css/style.css">
 <!-- 개인CSS -->
 
 
@@ -36,10 +36,10 @@
 
 
 <link rel="stylesheet" type="text/css"
-	href="<%=rootPath%>/dhtmlx/fonts/font_roboto/roboto.css" />
+	href="<%=rootPath%>/rsc/dhtmlx/fonts/font_roboto/roboto.css" />
 <link rel="stylesheet" type="text/css"
-	href="<%=rootPath%>/dhtmlx/dhtmlx.css" />
-<script src="<%=rootPath%>/dhtmlx/dhtmlx.js"></script>
+	href="<%=rootPath%>/rsc/dhtmlx/dhtmlx.css" />
+<script src="<%=rootPath%>/rsc/dhtmlx/dhtmlx.js"></script>
 
 
 
@@ -47,12 +47,18 @@
 
 <style>
 .head-nav_menu-img {
-	width: 30px;
+	width: 40px;
 	height: auto;
 }
 
 .head-menu_menu-img--h17 {
 	height: 17px;
+	width: auto;
+}
+
+.navbar-brand>img {
+	margin-top: -5px;
+	height: 30px;
 	width: auto;
 }
 </style>
@@ -81,7 +87,6 @@
 					</button>
 					<!-- 여기에 이미지 넣으면 로고된다 -->
 					<a class="navbar-brand" href="/"><img alt="Brand"
-						style="margin-top: -5px; height: 30px; width: auto;"
 						src="/img/logo.png"></a>
 					<!-- 여기에 이미지 넣으면 로고된다 글넣으면 글되고 -->
 				</div>
@@ -156,8 +161,8 @@
 
 								<li class="dropdown"><a href="#" class="dropdown-toggle"
 									data-toggle="dropdown" role="button" aria-expanded="false">
-										나의 <img class="head-nav_menu-img" src="/img/logo.png"
-										style="width: 30px; height: auto;"><span class="caret"></span>
+										나의 <img class="head-nav_menu-img" src="/img/logo.png"><span
+										class="caret"></span>
 								</a>
 									<ul class="dropdown-menu" role="menu">
 										<li><a href="#">대시보드</a></li>
@@ -336,16 +341,16 @@
 			au.send();
 		}
 
-		/*		html += '<td>' + su.signupNum + '</td>';
-		 html += '<td><input type="text" id="signupName' + su.signupNum +'"value="'+su.signupName+ '"></td>';
-		 html += '<td><input type="text" id="signupId' + su.signupNum +'"value="'+su.signupId+ '"></td>';
-		 html += '<td><input type="text" id="signupPassword' + su.signupNum +'"value="'+su.signupPassword+ '"></td>';
-		 html += '<td><input type="text" id="signupEmail' + su.signupNum +'"value="'+su.signupEmail+ '"></td>';
-		 html += '<td><input type="text" id="signupNickName' + su.signupNum +'"value="'+su.signupNickName+ '"></td>';
-		 html += '<td><input type="text" id="signupDate' + su.signupNum +'"value="'+su.signupDate+ '"></td>';
-		 html += '<td><input type="text" id="signupConcern' + su.signupNum +'"value="'+su.signupConcern+ '"></td>';
-		 html += '<td><input type="text" id="signupPersonallity' + su.signupNum +'"value="'+su.signupPersonallity+ '"></td>';
-		 html += '<td><input type="text" id="signupPhone' + su.signupNum +'"value="'+su.signupPhone+ '"></td>';
-		 html += '</tr>';  */
+		/*		html += '_$ta' + su.signupNum + '_$tag';
+		 html += '_$ta_$tag____________________________________________________________________________$tag';
+		 html += '_$ta_$tag________________________________________________________________________$tag';
+		 html += '_$ta_$tag____________________________________________________________________________________$tag';
+		 html += '_$ta_$tag______________________________________________________________________________$tag';
+		 html += '_$ta_$tag____________________________________________________________________________________$tag';
+		 html += '_$ta_$tag____________________________________________________________________________$tag';
+		 html += '_$ta_$tag__________________________________________________________________________________$tag';
+		 html += '_$ta_$tag____________________________________________________________________________________________$tag';
+		 html += '_$ta_$tag______________________________________________________________________________$tag';
+		 html += '_$tag';  */
 	</script>
 </body>

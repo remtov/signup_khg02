@@ -14,12 +14,11 @@
 
 
 
-<body style="background-color: white;">
-	<div
-		style="width: 100%; background-color: #f6f6f6; height: 500px; margin-bottom: -30px; margin-top: -30px;">
+<body class="find-body_back--white">
+	<div class="find-container_wide--gray">
 
-		<div class="container" style="max-width: 800px;">
-			<div style="text-align: center; margin-bottom: 50px;">
+		<div class="container" id="find_container--800">
+			<div>
 
 
 				<h1>비밀번호 찾기</h1>
@@ -29,7 +28,7 @@
 			</div>
 
 
-			<form class="form-horizontal" style="margin-top: 40px;">
+			<form class="form-horizontal" id="find_form--40">
 
 				<div class="form-group">
 					<label for="signupId" class="col-sm-2 control-label">아이디</label>

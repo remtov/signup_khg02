@@ -1,7 +1,32 @@
 @charset "UTF-8";
 
+/* signup/find style */
 
+.find-body_back--white{
+background-color: white;	
+}
 
+.find-container_wide--gray {
+	width: 100%;
+	background-color: #f6f6f6;
+	height: 400px;
+	margin-bottom: -30px;
+	margin-top: -30px;
+}
+
+#find_container--800 {
+	max-width: 800px;
+}
+
+#find_container--800>div {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#find_form--40 {
+	margin-top: 40px;
+}
+/* signup/find style */
 
 /* 일반선택자 */
 body {
@@ -85,7 +110,6 @@ body {
 
 /* <!-- 롤오버드랍다운 css & script --> */
 
-
 /* 샵은아이디선택자 */
 #navi {
 	width: 100%;
@@ -153,8 +177,6 @@ body {
 	/* border: 1px solid gray; */
 }
 
-
-
 /* 클래스선택자 */
 .contentLeft {
 	margin-top: 20px;
@@ -201,7 +223,6 @@ body {
 	padding: 0px;
 	background-color: white;
 } */
-
 .titleBox {
 	margin-top: 200px;
 	margin-bottom: 30px;
@@ -319,4 +340,3 @@ body {
 		width: auto;
 	}
 }
-

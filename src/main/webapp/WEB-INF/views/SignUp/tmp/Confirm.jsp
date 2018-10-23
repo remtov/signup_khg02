@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>Page Not Found 404</title>
+<title>Confirm</title>
 </head>
 
 <body style="background-color: white;">
