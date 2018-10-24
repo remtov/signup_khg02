@@ -9,15 +9,17 @@
 <title>Login</title>
 
 <style>
-#find-pass_quiz--2 {
-	font-size: 0.8em;
+h1 {
+	margin-top: 50px;
 }
+
+
 </style>
 
 </head>
-<body class="find-body_back--white">
+<body>
 
-	<div class="find-container_wide--gray">
+	<div class="find-container">
 		<div class="container" id="find_container--800">
 			<!-- 로그인했을때 내용을 보여지게 하려했는데 지금은 네비게이션에 넣었다. -->
 			<c:choose>

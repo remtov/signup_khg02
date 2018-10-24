@@ -1,29 +1,65 @@
 @charset "UTF-8";
 
-/* signup/find style */
-.find-body_back--white {
+/* 일반선택자 */
+body {
+	/* background-color: #f6f6f6; */
 	background-color: white;
+	marginheight: 0px;
+	marginwidth: 0px;
+	overflow-x: hidden;
+	margin: 0px;
+	margin-top: 50px
 }
 
-.find-container_wide--gray {
-	width: 100%;
-	background-color: #f6f6f6;
-	height: 400px;
-	margin-bottom: -30px;
-	margin-top: -30px;
+.home_search-line {
+	margin-top: 30px;
+	position: relative;
 }
 
-#my-page_container-wide--gray {
+#session-less {
+	padding: 100px 0px 200px 0px;
+	text-align: center;
 	width: 100%;
 	background-color: #f6f6f6;
-	height: 400px;
-	margin-bottom: -30px;
-	margin-top: -30px;
+}
+
+#session-less>img {
+	width: 50px;
+}
+.view-container{
+	width: 100%;
+	background-color: #f6f6f6;
+
+	
+}
+.gray-container {
+	background-color: #f6f6f6;
+	position: relative;
+	cellpadding: 0px;
+	cellspacing: 0px;
+	width: 100%;
+	padding-top: 80px;
+	margin: auto;
+	z-index: 1;
+	overflow: visible;
+	border: 0px;
+	cellpadding: 0px;
+}
+
+/* login같은 간이페이지 공통css */
+.find-container {
+	width: 100%;
+	background-color: #f6f6f6;
+	height: 500px;
+}
+
+.my-page_container {
+	width: 100%;
+	background-color: #f6f6f6;
 }
 
 #find_container--800 {
-	max-width
- : 800px;
+	max-width: 800px;
 }
 
 #find_container--800>div {
@@ -34,17 +70,11 @@
 #find_form--40 {
 	margin-top: 40px;
 }
-/* signup/find style */
 
-/* 일반선택자 */
-body {
-	background-color: #f6f6f6;
-	marginheight: 0px;
-	marginwidth: 0px;
-	overflow-x: hidden;
-	margin: 0px;
-	padding-top: 80px
+#find-pass_quiz--2 {
+	font-size: 0.8em;
 }
+/* login같은 간이페이지 공통css */
 
 /* <!-- 롤오버드랍다운 css & script --> */
 .zeta-menu-bar {
@@ -128,22 +158,6 @@ body {
 	z-index: 2;
 }
 
-/* 
-#container {
-	background-color: #dfdfdf;
-	position: relative;
-	cellpadding: 0px;
-	cellspacing: 0px;
-	width: 1200px;
-	padding-top: 80px;
-	margin: auto;
-	z-index: 1;
-	overflow: visible;
-	border: 0px;
-	cellpadding: 0px;
-	margin: auto;
-}
- */
 #SearchLine {
 	width: 1150px;
 	height: 50px;
@@ -195,6 +209,7 @@ body {
 	float: left;
 	/* border: 1px solid gray; */
 	overflow: hidden;
+	position: relative;
 
 	/* border-radius: 4px; */
 }
@@ -208,6 +223,7 @@ body {
 	float: right;
 	/* border: 1px solid gray; */
 	overflow: hidden;
+	position: relative;
 }
 
 /* #contentFinal {

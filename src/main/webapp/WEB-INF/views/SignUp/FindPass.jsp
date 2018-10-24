@@ -9,22 +9,27 @@
 <head>
 <title>비밀번호 찾기</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+h1 {
+	margin-top: 100px;
+}
+</style>
+
+
 </head>
 
 
 
 
-<body class="find-body_back--white">
-	<div class="find-container_wide--gray">
+<body>
+	<div class="find-container">
 
 		<div class="container" id="find_container--800">
 			<div>
 
 
 				<h1>비밀번호 찾기</h1>
-				<p>
-					가입할 때 적으셨던 아이디, 성함, 전화번호를 입력하여 주십시오.
-				</p>
+				<p>가입할 때 적으셨던 아이디, 성함, 전화번호를 입력하여 주십시오.</p>
 			</div>
 
 

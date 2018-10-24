@@ -8,15 +8,19 @@
 <title>ID 찾기</title>
 
 <style>
-
+h1 {
+	margin-top: 100px;
+}
 </style>
 </head>
 
 
 
-<body class="find-body_back--white">
-	
-	<div class="find-container_wide--gray">
+
+
+<body>
+
+	<div class="find-container">
 
 		<div class="container" id="find_container--800">
 			<div>

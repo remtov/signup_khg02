@@ -23,7 +23,12 @@
 
 	<!--길어진 리소스생략 로직 -->
 
+	<mvc:resources mapping="/css/**" location="/rsc/css/" />
+	<mvc:resources mapping="/dhtmlx/**" location="/rsc/dhtmlx/" />
+	<mvc:resources mapping="/fonts/**" location="/rsc/fonts/" />
 	<mvc:resources mapping="/img/**" location="/rsc/img/" />
+	<mvc:resources mapping="/js/**" location="/rsc/js/" />
+	
 	<!--길어진 리소스생략 로직 -->
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
