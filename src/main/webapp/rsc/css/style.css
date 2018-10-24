@@ -22,7 +22,8 @@
 }
 
 #find_container--800 {
-	max-width: 800px;
+	max-width
+ : 800px;
 }
 
 #find_container--800>div {
