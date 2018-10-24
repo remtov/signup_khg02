@@ -5,22 +5,169 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>my페이지</title>
+<title>MY PAGE</title>
 
 </head>
 
 
+<style>
+#my-page_container {
+	height: 100%;
+}
+
+.my-page_search-line {
+	position: relative;
+}
+
+#my-page_drop-down {
+	display: inline-block;
+	width: 100px;
+}
+
+.my-page_search-bar {
+	z-index: 1;
+	display: inline-block;
+	position: absolute;
+	left: 100px;
+	right: 0;
+}
+
+.my-page_back-ground {
+	margin-top: 10px;
+	position: relative;
+}
+
+#my-page_row1 {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	text-align: right;
+	transform: translate(-50%);
+	width: 800px;
+	height: 20px;
+	z-index: 2;
+}
+
+#my-page_row1>button {
+	height: 100%;
+	font-size: 0.8em;
+	margin-top: 0px;
+}
+
+#my-page_row1>button>p {
+	margin-top: -5px;
+}
+
+#my-page_row1>button>p>img {
+	height: 17px;
+	margin-top: -3px;
+}
+
+#my-page_row2 {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%);
+	width: 800px;
+	background-color: #f6f6f6;
+	height: 200px;
+	z-index: 2;
+}
+
+#my-page_row2>.col-md-3 {
+	height: 100%;
+	z-index: 3;
+	position: relative;
+}
+
+#my-page_row2>.col-md-3>img {
+	margin-top: 20px;
+	width: 100%;
+}
+
+#my-page_row2>.col-md-3>div {
+	position: absolute;
+	width: 30px;
+	top: 0px;
+	right: 0px;
+}
+
+#my-page_row2>.col-md-3>div>button {
+	margin-top: 5px;
+}
+
+#my-page_row2>.col-md-3>div>button>img {
+	width: 100%;
+}
+
+#my-page_row2>.col-md-4 {
+	height: 100%;
+	z-index: 3;
+}
+
+#my-page_row2>.col-md-4 .form-control {
+	margin-top: 5px;
+}
+
+#my-page_row2>.col-md-5 {
+	height: 100%;
+	z-index: 3;
+}
+
+#my-page_button-save {
+	margin-top: 5px;
+}
+
+.my-page_follow-line {
+	margin-top: 10px;
+}
+
+.my-page_follow-line>img {
+	width: 20px;
+}
+
+.my-page_back-ground>img {
+	width: 100%;
+	z-index: 1;
+}
+
+#my-page_setting-button {
+	width: 100%;
+	margin-top: -50px;
+	text-align: right;
+}
+
+#my-page_setting-button>img {
+	width: 15px;
+}
+
+#my-page_follow-line {
+	margin-bottom: 30px;
+}
+
+#my-page_session-less {
+	padding: 100px 0px 200px 0px;
+	text-align: center;
+	width: 100%;
+	background-color: #f6f6f6;
+}
+
+#my-page_session-less>img {
+	width: 50px;
+}
+</style>
+
 <body>
-	<div class="container">
+	<div class="container" id="my-page_container">
 		<c:choose>
 			<c:when test="${not empty sessionScope.userLoginInfo}">
 
 				<!-- 두번째 검색창라인 -->
-				<div id="searchLine" style="position: relative;">
+				<div id="searchLine" class="my-page_search-line">
 
 
 					<!-- 카테고리드랍다운영역 -->
-					<div class="dropdown" style="display: inline-block; width: 100px;">
+					<div class="dropdown" id="my-page_drop-down">
 						<button class="btn btn-default dropdown-toggle" type="button"
 							id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 							카테고리 <span class="caret"></span>
@@ -40,8 +187,7 @@
 					<!-- 카테고리드랍다운영역 -->
 
 					<!-- 검색창영역 -->
-					<div
-						style="z-index: 1; display: inline-block; position: absolute; left: 100px; right: 0;">
+					<div class="my-page_search-bar">
 						<div class="input-group">
 
 							<input type="text" class="form-control" aria-label="..."
@@ -74,35 +220,32 @@
 				</div>
 				<!-- 검색창영역 -->
 
+				<!-- 프로필판넬 -->
+				<div class="my-page_back-ground">
 
-				<div style="margin-top: 10px; position: relative;">
-					<!-- 프로필판넬 -->
 
 
-					<div class="row"
-						style="position: absolute; top: 50px; left: 50%; text-align: right; transform: translate(-50%); width: 800px; height: 20px; z-index: 2;">
-						<button class="btn btn-default"
-							style="height: 100%; font-size: 0.8em; margin-top: 0px">
-							<p style="margin-top: -5px">
-								배경이미지 편집 <img src="/img/icon_edit.png"
-									style="height: 17px; margin-top: -3px">
+					<div class="row" id="my-page_row1">
+
+						<button class="btn btn-default">
+
+							<p>
+								배경이미지 편집 <img src="/img/icon_edit.png">
 							</p>
 							<!-- 수정버튼 -->
 						</button>
 
 					</div>
-					<div class="row"
-						style="position: absolute; bottom: 0px; left: 50%; transform: translate(-50%); width: 800px; background-color: #f6f6f6; height: 200px; z-index: 2;">
+
+					<div class="row" id="my-page_row2">
 						<!-- 프로필판넬 -->
-						<div class="col-md-3"
-							style="height: 100%; z-index: 3; position: relative;">
-							<img src="/img/icon_profile02.png"
-								style="margin-top: 20px; width: 100%;">
+
+						<div class="col-md-3">
+							<img src="/img/icon_profile02.png">
 							<!-- 프로필사진 -->
-							<div
-								style="position: absolute; width: 30px; top: 0px; right: 0px;">
-								<button style="margin-top: 5px">
-									<img src="/img/icon_edit.png" style="width: 100%;">
+							<div>
+								<button>
+									<img src="/img/icon_edit.png">
 									<!-- 수정버튼 -->
 								</button>
 
@@ -111,27 +254,25 @@
 						</div>
 						<!-- 수정 인풋 -->
 
-						<div class="col-md-4" style="height: 100%; z-index: 3;">
+						<div class="col-md-4">
 							<table>
 								<tr>
 									<td>이름</td>
-									<td><input class="form-control" style="margin-top: 5px"
-										type="text" id="signupName" value="${userLoginInfo.signupName}"
+									<td><input class="form-control" type="text"
+										id="signupName" value="${userLoginInfo.signupName}"
 										data-vali="2"></td>
 								</tr>
 								<tr>
 									<td>아이디</td>
-									<td><input class="form-control" style="margin-top: 5px"
-										type="text" id="signupId" value="${userLoginInfo.signupId}"
-										data-vali="2"></td>
+									<td><input class="form-control" type="text" id="signupId"
+										value="${userLoginInfo.signupId}" data-vali="2"></td>
 								</tr>
 
 								<tr>
 									<td>패스워드</td>
-									<td><input class="form-control" style="margin-top: 5px"
-										type="text" id="signupPassword"
-										value="${userLoginInfo.signupPassword}" data-vali="2">
-									</td>
+									<td><input class="form-control" type="text"
+										id="signupPassword" value="${userLoginInfo.signupPassword}"
+										data-vali="2"></td>
 								</tr>
 								<tr>
 									<td colspan="2"><div class="form-group">
@@ -150,35 +291,34 @@
 
 						</div>
 
-						<div class="col-md-5" style="height: 100%; z-index: 3;">
+						<div class="col-md-5">
 							<table>
 								<tr>
 									<td>별명</td>
-									<td><input class="form-control" style="margin-top: 5px"
-										type="text" id="signupNickName"
-										value="${userLoginInfo.signupNickName}" data-vali="2">
-									</td>
+									<td><input class="form-control" type="text"
+										id="signupNickName" value="${userLoginInfo.signupNickName}"
+										data-vali="2"></td>
 
 								</tr>
 
 								<tr>
 									<td>이메일</td>
-									<td><input class="form-control" style="margin-top: 5px"
-										type="text" id="signupEmail"
-										value="${userLoginInfo.signupEmail}" data-vali="2"></td>
+									<td><input class="form-control" type="text"
+										id="signupEmail" value="${userLoginInfo.signupEmail}"
+										data-vali="2"></td>
 
 								</tr>
 
 								<tr>
 									<td>폰번호</td>
-									<td><input class="form-control" style="margin-top: 5px"
-										type="text" id="signupPhone"
-										value="${userLoginInfo.signupPhone}" data-vali="2"></td>
+									<td><input class="form-control" type="text"
+										id="signupPhone" value="${userLoginInfo.signupPhone}"
+										data-vali="2"></td>
 
 								</tr>
 
 								<tr>
-									<td colspan="2"><input style="margin-top: 5px"
+									<td colspan="2"><input id="my-page_button-save"
 										class="btn btn-default btn-lg btn-block" type="button"
 										name="checkButton" value=" 수 정 " onclick="save()"></td>
 
@@ -186,11 +326,9 @@
 								<tr>
 
 									<td colspan="2">
-										<p style="margin-top: 10px;">
-											팔로윙 0명 | 팔로워 0명 | <img style="width: 20px;"
-												src="/img/kakao.png"> <img style="width: 20px;"
-												src="/img/facebook.png"> <img style="width: 20px;"
-												src="/img/instagram.png">
+										<p class="my-page_follow-line">
+											팔로윙 0명 | 팔로워 0명 | <img src="/img/kakao.png"> <img
+												src="/img/facebook.png"> <img src="/img/instagram.png">
 										</p>
 									</td>
 								</tr>
@@ -205,7 +343,7 @@
 					</div>
 
 
-					<img src="/img/background01.jpg" style="width: 100%; z-index: 1;">
+					<img src="/img/background01.jpg">
 				</div>
 				<!-- 배경 -->
 
@@ -222,31 +360,48 @@
 				</p>
 				<hr>
 
-				<div style="width: 100%; margin-top: -50px; text-align: right;">
-					<img src="/img/icon_setup.png" style="width: 15px;">설정
+
+				<div id="my-page_setting-button">
+					<img src="/img/icon_setup.png">설정
 				</div>
-				<h2>팔로윙</h2>
-				<p>
-					다른 회원, 소장품 및 관심사를 따라 가면 <a href="#">bong 피드</a>에서 더 많은 검색 결과를 얻을 수
-					있습니다.
-				</p>
-				<hr>
-				<h2>팔로워</h2>
-				<p style="margin-bottom: 30px;">
-					아직 팔로워가 없습니다. 프로필을 <a href="#">맞춤 설정</a>하면 다른 회원에게 좋은 인상을 남길 수
-					있습니다.
-				</p>
+
+				<div>
+					<h2>팔로윙</h2>
+					<p>
+						다른 회원, 소장품 및 관심사를 따라 가면 <a href="#">bong 피드</a>에서 더 많은 검색 결과를 얻을 수
+						있습니다.
+					</p>
+				</div>
+				<div id="my-page_follow-line">
+					<hr>
+					<h2>팔로워</h2>
+					<p>
+						아직 팔로워가 없습니다. 프로필을 <a href="#">맞춤 설정</a>하면 다른 회원에게 좋은 인상을 남길 수
+						있습니다.
+					</p>
+				</div>
 
 
 
-				<!-- 세션없는사람에게 보여지는 부분 -->
 			</c:when>
 			<c:otherwise>
-				<div style="text-align: center;">
-					<img src="/img/icon_login.png" style="width: 50px;">
-					<h3>로그인 후 이용 부탁드립니다.</h3>
-					<a href="/url/SignUp:login">여기를 클릭</a>하여 로그인하러 가기
-				</div>
+				<!-- 세션없는사람에게 보여지는 부분 -->
+				<head>
+<style>
+body {
+	background-color: white;
+}
+</style>
+
+				</head>
+				<body>
+					<div id="my-page_session-less">
+						<img src="/img/icon_login.png">
+						<h3>로그인 후 이용 부탁드립니다.</h3>
+						<a href="/url/SignUp:login">여기를 클릭</a>하여 로그인하러 가기
+
+					</div>
+				</body>
 				<!-- 세션없는사람에게 보여지는 부분 -->
 
 			</c:otherwise>

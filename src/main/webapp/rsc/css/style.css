@@ -1,12 +1,19 @@
 @charset "UTF-8";
 
 /* signup/find style */
-
-.find-body_back--white{
-background-color: white;	
+.find-body_back--white {
+	background-color: white;
 }
 
 .find-container_wide--gray {
+	width: 100%;
+	background-color: #f6f6f6;
+	height: 400px;
+	margin-bottom: -30px;
+	margin-top: -30px;
+}
+
+#my-page_container-wide--gray {
 	width: 100%;
 	background-color: #f6f6f6;
 	height: 400px;

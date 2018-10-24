@@ -7,12 +7,18 @@
 <head>
 <meta charset="UTF-8" />
 <title>Login</title>
-</head>
-<body style="background-color: white;">
 
-	<div
-		style="width: 100%; background-color: #f6f6f6; height: 500px; margin-bottom: -30px; margin-top: -30px;">
-		<div class="container" style="max-width: 800px;">
+<style>
+#find-pass_quiz--2 {
+	font-size: 0.8em;
+}
+</style>
+
+</head>
+<body class="find-body_back--white">
+
+	<div class="find-container_wide--gray">
+		<div class="container" id="find_container--800">
 			<!-- 로그인했을때 내용을 보여지게 하려했는데 지금은 네비게이션에 넣었다. -->
 			<c:choose>
 				<c:when test="${not empty sessionScope.userLoginInfo}">
@@ -27,7 +33,7 @@
 					<!-- 로그인했을때 내용을 보여지게 하려했는데 지금은 네비게이션에 넣었다. -->
 
 
-					<div style="text-align: center; margin-bottom: 50px;">
+					<div>
 						<h1>로그인</h1>
 						<p>
 							아직 가입하지 않으셨습니까? <a onclick="signUp()">회원가입</a>
@@ -53,7 +59,7 @@
 							</div>
 						</div>
 
-						<div class="form-group" style="font-size: 0.8em">
+						<div class="form-group" id="find-pass_quiz--2">
 							<div class="col-sm-offset-2 col-sm-10">
 								<p>
 									아이디를 잊어버리셨습니까? <a onclick="loosingId()">아이디찾기</a>

@@ -8,7 +8,7 @@
 <html>
 <head>
 <title>비밀번호 찾기</title>
-<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 
 
