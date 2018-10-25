@@ -31,6 +31,7 @@
 .my-page_back-ground {
 	margin-top: 10px;
 	position: relative;
+	z-index: 1;
 }
 
 #my-page_row1 {

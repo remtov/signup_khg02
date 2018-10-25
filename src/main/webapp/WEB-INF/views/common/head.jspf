@@ -10,6 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="/resources/img/favi.png">
 <!-- 스마트폰해상도호환 -->
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
@@ -19,36 +20,34 @@
 <title>달래옥션 - Dallae Auction</title>
 
 <!-- 부트스트랩 -->
-<link href="<%=rootPath%>/rsc/css/bootstrap.min.css" rel="stylesheet">
+<link href="<%=rootPath%>/resources/css/bootstrap.min.css"
+	rel="stylesheet">
 <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="<%=rootPath%>/rsc/js/bootstrap.min.js"></script>
+<script src="<%=rootPath%>/resources/js/bootstrap.min.js"></script>
+<script src="<%=rootPath%>/resources/js/AjaxUtil.js"></script>
 <!-- 개인CSS -->
-<link rel="stylesheet" href="<%=rootPath%>/rsc/css/style.css">
+<link rel="stylesheet" href="<%=rootPath%>/resources/css/style.css">
 <!-- 개인CSS -->
-
-
 
 
 <!-- dhtmlx 영역 -->
-
-
-
 <link rel="stylesheet" type="text/css"
-	href="<%=rootPath%>/rsc/dhtmlx/fonts/font_roboto/roboto.css" />
+	href="<%=rootPath%>/resources/dhtmlx/fonts/font_roboto/roboto.css" />
 <link rel="stylesheet" type="text/css"
-	href="<%=rootPath%>/rsc/dhtmlx/dhtmlx.css" />
-<script src="<%=rootPath%>/rsc/dhtmlx/dhtmlx.js"></script>
-
-
-
+	href="<%=rootPath%>/resources/dhtmlx/dhtmlx.css" />
+<script src="<%=rootPath%>/resources/dhtmlx/dhtmlx.js"></script>
 <!-- dhtmlx 영역 -->
 
 <style>
 .head-nav_menu-img {
 	width: 40px;
 	height: auto;
+}
+
+.head-nav_menu-img ul {
+	z-index: 3;
 }
 
 .head-menu_menu-img--h17 {
@@ -152,8 +151,8 @@
 
 
 							<ul class="nav navbar-nav navbar-right">
-								<li><a href="#">오늘의 추천거래</a></li>
-								<li><a href="#">내 물건 팔기</a></li>
+								<li><a href="/url/bproduct:list">오늘의 추천거래</a></li>
+								<li><a href="/url/bproduct:insert">내 물건 팔기</a></li>
 								<li><a href="#">도움말 및 문의</a></li>
 
 
@@ -167,6 +166,8 @@
 									<ul class="dropdown-menu" role="menu">
 										<li><a href="#">대시보드</a></li>
 										<li class="divider"></li>
+
+										<li><a href="/url/bproduct:view">테스트:/url/bproduct:view</a></li>
 										<li><a href="#">최근이용내역</a></li>
 										<li><a href="#">구매내역</a></li>
 										<li><a href="#">저장된컨텐츠</a></li>
@@ -227,20 +228,23 @@
 
 							<!-- 여기는 세션이 없는 사람에대한 내용 -->
 							<ul class="nav navbar-nav navbar-right">
-								<li><a href="#">오늘의 추천거래</a></li>
-								<li><a href="#">내 물건 팔기</a></li>
+								<li><a href="/url/bproduct:list">오늘의 추천거래</a></li>
+								<li><a href="/url/bproduct:insert">내 물건 팔기</a></li>
 								<li><a href="#">도움말 및 문의</a></li>
+
+
+
 
 								<li class="dropdown"><a href="#" class="dropdown-toggle"
 									data-toggle="dropdown" role="button" aria-expanded="false">
-										나의 <img src="/img/logo.png" class="head-nav_menu-img"><span
+										나의 <img class="head-nav_menu-img" src="/img/logo.png"><span
 										class="caret"></span>
 								</a>
-
 									<ul class="dropdown-menu" role="menu">
 										<li><a href="#">대시보드</a></li>
 										<li class="divider"></li>
-										<li><a href="#">최근이용내역</a></li>
+
+										<li><a href="/url/bproduct:view">테스트:/url/bproduct:view</a></li>
 										<li><a href="#">구매내역</a></li>
 										<li><a href="#">저장된컨텐츠</a></li>
 										<li><a href="#">저장된판매자</a></li>

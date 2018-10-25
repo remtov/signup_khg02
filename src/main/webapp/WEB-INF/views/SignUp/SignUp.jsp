@@ -21,130 +21,140 @@ function agreeCheck(frm)
 }
 
 </script>
+
+
+<style>
+#sign-up_btn {
+	height: 100px;
+	/* background-color:red; */
+}
+</style>
+
 </head>
 <body>
-	<div class="container" style="max-width: 800px;">
-		<div style="text-align: center; margin-bottom: 50px;">
-			<h1>회원가입</h1>
-			<p>
-				이미 회원입니까? <a href="/url/SignUp:login">로그인</a>
-			</p>
-
-		</div>
-
-
-
-
-
-
-
-		<form class="form-horizontal" name="form">
-
-
-
-
-			<div class="form-group">
-				<label for="signupName" class="col-sm-2 control-label">이름</label>
-
-				<div class="col-sm-10">
-					<input type="text" id="signupName" data-vali="2"
-						class="form-control" placeholder="이름">
-				</div>
-			</div>
-
-
-			<div class="form-group">
-				<label for="signupId" class="col-sm-2 control-label">아이디</label>
-
-				<div class="col-sm-10">
-					<input type="text" id="signupId" data-vali="2" class="form-control"
-						placeholder="아이디">
-				</div>
-			</div>
-
-
-
-			<div class="form-group">
-				<label for="signupPassword" class="col-sm-2 control-label">비밀번호</label>
-
-				<div class="col-sm-10">
-					<input class="form-control" type="password" id="signupPassword"
-						data-vali="2" placeholder="비밀번호">
-				</div>
-			</div>
-
-
-
-			<div class="form-group">
-				<label for="conpassword" class="col-sm-2 control-label">비밀번호
-					확인</label>
-
-				<div class="col-sm-10">
-					<input class="form-control" type="password" id="conpassword"
-						data-vali="2" placeholder="비밀번호 확인">
-				</div>
-			</div>
-
-
-
-
-			<div class="form-group">
-				<label for="signupEmail" class="col-sm-2 control-label">Email</label>
-
-				<div class="col-sm-10">
-					<input type="email" id="signupEmail" class="form-control"
-						placeholder="이메일 주소를 입력하세요 예)abc@defg.com">
-				</div>
-			</div>
-
-
-
-
-			<div class="form-group">
-				<label for="signupNickName" class="col-sm-2 control-label">별명</label>
-
-				<div class="col-sm-10">
-					<input type="text" class="form-control" id="signupNickName"
-						placeholder="별명" data-vali="2">
-				</div>
-			</div>
-
-			<div class="form-group">
-				<label for="inputPassword3" class="col-sm-2 control-label">주민등록번호</label>
-
-				<div class="col-sm-5">
-					<input type="number" class="form-control" id="front"
-						placeholder="주민등록번호 앞자리" data-vali="2">
-				</div>
-
-				<div class="col-sm-5">
-					<input type="number" class="form-control" id="end"
-						placeholder="주민등록번호 뒷자리" data-vali="2">
-				</div>
+	<div class="my-page_container">
+		<div class="container" id="find_container--800">
+			<div style="text-align: center; margin-bottom: 50px;">
+				<h1>회원가입</h1>
+				<p>
+					이미 회원입니까? <a href="/url/SignUp:login">로그인</a>
+				</p>
 
 			</div>
 
 
-			<div class="form-group">
-				<label for="signupPhone" class="col-sm-2 control-label">전화번호</label>
 
-				<div class="col-sm-10">
-					<input type="text" class="form-control" id="signupPhone"
-						placeholder="전화번호를 입력해주세요 예)01012345678" data-vali="2">
-				</div>
-			</div>
 
-			<div class="form-group">
-				<label for="myform" class="col-sm-2 control-label">관심사</label>
 
-				<div class="col-sm-10" style="margin-top: 7px;">
-					<div id="myform">
-						<input type="checkbox" id="beauty">미용 <input
-							type="checkbox" id="machine">전자기기 <input type="checkbox"
-							id="life">생활<br>
 
+
+			<form class="form-horizontal" name="form">
+
+
+
+
+				<div class="form-group">
+					<label for="signupName" class="col-sm-2 control-label">이름</label>
+
+					<div class="col-sm-10">
+						<input type="text" id="signupName" data-vali="2"
+							class="form-control" placeholder="이름">
 					</div>
-					<!-- 	<div class="checkbox" id="myform">
+				</div>
+
+
+				<div class="form-group">
+					<label for="signupId" class="col-sm-2 control-label">아이디</label>
+
+					<div class="col-sm-10">
+						<input type="text" id="signupId" data-vali="2"
+							class="form-control" placeholder="아이디">
+					</div>
+				</div>
+
+
+
+				<div class="form-group">
+					<label for="signupPassword" class="col-sm-2 control-label">비밀번호</label>
+
+					<div class="col-sm-10">
+						<input class="form-control" type="password" id="signupPassword"
+							data-vali="2" placeholder="비밀번호">
+					</div>
+				</div>
+
+
+
+				<div class="form-group">
+					<label for="conpassword" class="col-sm-2 control-label">비밀번호
+						확인</label>
+
+					<div class="col-sm-10">
+						<input class="form-control" type="password" id="conpassword"
+							data-vali="2" placeholder="비밀번호 확인">
+					</div>
+				</div>
+
+
+
+
+				<div class="form-group">
+					<label for="signupEmail" class="col-sm-2 control-label">Email</label>
+
+					<div class="col-sm-10">
+						<input type="email" id="signupEmail" class="form-control"
+							placeholder="이메일 주소를 입력하세요 예)abc@defg.com">
+					</div>
+				</div>
+
+
+
+
+				<div class="form-group">
+					<label for="signupNickName" class="col-sm-2 control-label">별명</label>
+
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="signupNickName"
+							placeholder="별명" data-vali="2">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="inputPassword3" class="col-sm-2 control-label">주민등록번호</label>
+
+					<div class="col-sm-5">
+						<input type="number" class="form-control" id="front"
+							placeholder="주민등록번호 앞자리" data-vali="2">
+					</div>
+
+					<div class="col-sm-5">
+						<input type="number" class="form-control" id="end"
+							placeholder="주민등록번호 뒷자리" data-vali="2">
+					</div>
+
+				</div>
+
+
+				<div class="form-group">
+					<label for="signupPhone" class="col-sm-2 control-label">전화번호</label>
+
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="signupPhone"
+							placeholder="전화번호를 입력해주세요 예)01012345678" data-vali="2">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="myform" class="col-sm-2 control-label">관심사</label>
+
+					<div class="col-sm-10" style="margin-top: 7px;">
+						<div id="myform">
+							<input type="checkbox" id="beauty">미용 <input
+								type="checkbox" id="machine">전자기기 <input type="checkbox"
+								id="life">생활<br>
+
+						</div>
+						<!-- 	<div class="checkbox" id="myform">
 
 						<label class="checkbox-inline"> <input type="checkbox">
 							미용
@@ -158,27 +168,27 @@ function agreeCheck(frm)
 
 
 					</div> -->
+					</div>
 				</div>
-			</div>
 
 
-			<!-- ------------------------------------ -->
-
-
+				<!-- ------------------------------------ -->
 
 
 
 
-			<!-- 체크 -->
 
-			<!-- 체크 -->
 
-			<!-- 버튼 -->
-			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
+				<!-- 체크 -->
 
-					<textarea class="form-control" cols="40" rows="5"
-						style="width: 100%; height: 300px;">1. 소개
+				<!-- 체크 -->
+
+				<!-- 버튼 -->
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+
+						<textarea class="form-control" cols="40" rows="5"
+							style="width: 100%; height: 300px;">1. 소개
 
 2. Dallae 정보
 3. Dallae 사용
@@ -438,47 +448,47 @@ C. 법적 분쟁을위한 사법 포럼
 
 일리노이 사건 티켓과 관련된 거래의 경우, 구매자와 판매자는 규칙과 절차에 따라 미국 중재 협회 ( "AAA")에 불만 사항을 제출할 수 있습니다. 815 ILCS 414 / 1.5 (c) AAA의 규칙은 www.adr.org 에서 확인할 수 있습니다 . 이러한 불만은이 사용자 계약에 따라 독립적 인 중재자가 결정합니다. 구매자와 판매자는 일리노이 주에서 열리는 티켓 행사와 관련된 불만을 제기하기 위해 일리노이 주 관할권에 더 동의합니다.
  </textarea>
-					<!-- 약관내용 콜랍스축소 -->
+						<!-- 약관내용 콜랍스축소 -->
 
 
-				</div>
-			</div>
-
-
-			<div class="form-group">
-				<label for="inputPassword3" class="col-sm-2 control-label">약관
-					동의</label>
-
-				<div class="col-sm-10" style="margin-top: -7px;">
-
-					<div class="checkbox">
-						<label class="checkbox-inline"> <input type="checkbox"
-							name="agree" onClick="agreeCheck(this.form)"> 체크하심으로
-							회원가입을 완료하실 수 있습니다.
-
-						</label>
 					</div>
 				</div>
-			</div>
-			<!-- 버튼 -->
-
-			<!-- ------------------------------------ -->
 
 
+				<div class="form-group">
+					<label for="inputPassword3" class="col-sm-2 control-label">약관
+						동의</label>
+
+					<div class="col-sm-10" style="margin-top: -7px;">
+
+						<div class="checkbox">
+							<label class="checkbox-inline"> <input type="checkbox"
+								name="agree" onClick="agreeCheck(this.form)"> 체크하심으로
+								회원가입을 완료하실 수 있습니다.
+
+							</label>
+						</div>
+					</div>
+				</div>
+				<!-- 버튼 -->
+
+				<!-- ------------------------------------ -->
 
 
-			<hr>
 
-			<input class="btn btn-default btn-lg btn-block" type="button"
-				name="checkButton" value=" 확 인 " disabled onclick="save()">
 
-		</form>
+				<hr>
+				<div id="sign-up_btn">
+					<input class="btn btn-default btn-lg btn-block" type="button"
+						name="checkButton" value=" 확 인 " disabled onclick="save()">
+				</div>
+			</form>
+
+		</div>
+
+
 
 	</div>
-
-
-
-
 
 
 

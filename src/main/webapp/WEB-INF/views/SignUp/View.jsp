@@ -37,6 +37,10 @@ table {
 	text-align: center;
 	margin-bottom: 50px;
 }
+
+#view_btn-tr{
+height:100px;
+}
 </style>
 
 </head>
@@ -104,20 +108,32 @@ table {
 						type="text" id="signupPersonallity"
 						value="${li.signupPersonallity}"></td>
 				</tr>
+
 				<tr>
 					<th class="col-md-2">회원폰번호</th>
 					<td colspan="2" class="col-md-10"><input class="form-control"
 						type="text" id="signupPhone" value="${li.signupPhone}"></td>
 				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<button class="form-control" type="button" onclick="Update()">수정</button>
+
+
+				<tr id="view_btn-tr">
+					<th class="col-md-2"></th>
+					<td class="col-md-5">
+
+						<button class="btn btn-default btn-lg btn-block" type="button"
+							onclick="Update()">수정</button>
+
 					</td>
-					<td><button class="form-control" type="button"
-							onclick="Delete()">삭제</button></td>
+					<td class="col-md-5">
+
+						<button class="btn btn-danger btn-lg btn-block" type="button"
+							onclick="Delete()">주의! 삭제</button>
+
+					</td>
 
 				</tr>
+
+
 
 			</table>
 			<div></div>

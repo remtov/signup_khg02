@@ -46,7 +46,7 @@ h1 {
 						<div class="form-group">
 							<label for="signupId" class="col-sm-2 control-label">아이디</label>
 							<div class="col-sm-10">
-								<input type="text" id="signupId" data-vali="2"
+								<input type="text" onkeypress = "enter(event)" id="signupId" data-vali="2"
 									class="form-control" placeholder="아이디를 입력하세요.">
 							</div>
 						</div>
@@ -56,7 +56,7 @@ h1 {
 							<label for="signupPassword" class="col-sm-2 control-label">비밀번호</label>
 
 							<div class="col-sm-10">
-								<input class="form-control" type="password" id="signupPassword"
+								<input class="form-control" onkeypress = "enter(event)" type="password" id="signupPassword"
 									data-vali="2" placeholder="비밀번호를 입력하세요.">
 							</div>
 						</div>
@@ -96,6 +96,12 @@ h1 {
 
 
 	<script>
+	function enter(ent){
+		var code = ent.which?ent.which:event.keyCode;
+		if(code==13){
+			loging()
+		}
+	}
 		function loging() {
 			var signupId = document.querySelector('#signupId').value
 			var signupPassword = document.querySelector('#signupPassword').value
